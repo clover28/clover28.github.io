@@ -56,6 +56,9 @@ footer a {
   color: #e15484;
 }
 
+ul {
+  font-weight: 300;
+}
 
 .bg-light {
     background-color: #FFFFFF!important;
