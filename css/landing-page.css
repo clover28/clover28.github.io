@@ -137,8 +137,7 @@ hr {
 }
 
 .parallax-window {
-  min-height: 400px;
-  background: transparent !important;
+  min-height: 500px;
 }
 
 .project-title {
@@ -367,7 +366,7 @@ p.copyright {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #5f4b8b;
+  background: #FFD8D4;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -388,7 +387,7 @@ p.copyright {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #5f4b8b;
+  background: #FFD8D4;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -417,3 +416,15 @@ p.copyright {
   transform: scaleX(1);
 }
 
+.parallax-window {
+   background-image: url('../img/hyecho_teaser3.png');
+
+    /* Full height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
