@@ -367,7 +367,7 @@ p.copyright {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #98DBE3;
+  background: #5f4b8b;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -388,7 +388,7 @@ p.copyright {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #FFD8D4;
+  background: #5f4b8b;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -406,6 +406,12 @@ p.copyright {
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active, .hvr-shutter-out-horizontal2:hover, .hvr-shutter-out-horizontal2:focus, .hvr-shutter-out-horizontal2:active {
   color: white;
 }
+
+.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before, .hvr-shutter-out-horizontal2:hover:before, .hvr-shutter-out-horizontal2:focus:before, .hvr-shutter-out-horizontal2:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before, .hvr-shutter-out-horizontal2:hover:before, .hvr-shutter-out-horizontal2:focus:before, .hvr-shutter-out-horizontal2:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
