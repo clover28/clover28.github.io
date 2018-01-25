@@ -416,7 +416,7 @@ p.copyright {
   transform: scaleX(1);
 }
 
-.parallax-window {
+.parallax-window-h {
    background-image: url('../img/hyecho_teaser3.png');
 
     /* Full height */
