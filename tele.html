@@ -84,7 +84,7 @@
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
             <p class="strong">Overview</p>
-            <p>There is increasing need for a source-of-truth for design and front-end development at TeleTracking, and I was given the task of envisioning such a system during my summer internship. From research to ideation and iteration, I brought out a game plan for building a design system and got stakeholder buy-in. I helped the design team transition from older tools to Sketch, and I am continuing to build our UI library in Sketch.</p>
+            <p>There is increasing need for a source-of-truth for design and front-end development at TeleTracking, and I was given the task of envisioning such a system during my summer internship. Through research, ideation ,and iteration, I brought out a game plan for building a design system and got stakeholder buy-in. I helped the design team transition from older tools to Sketch and started building the web component library.</p>
           </div>
           <div class="col-lg-2 mr-auto">
             <hr class="section-heading-spacer">
@@ -110,6 +110,18 @@
 
 <div class="container">
   <div class="row">
+    <h4 class="mt80">Solution at a Glance</h4>
+    <div class="col-sm-12"><p class="medium strong margin-15">1. Workflow Optimization</p></div>
+    <div class="col-sm-12"><img class="img-fluid" src="img/workflow_solution.png" alt=""> </div>
+    <p class="medium strong margin-top-40">2. Web Component Library</p>
+    <div class="row">
+      <div class="col-sm-6 m-auto"><img class="img-fluid material-shadow-1" src="img/atoms.png" alt=""> </div>
+      <div class="col-sm-6 m-auto"><img class="img-fluid material-shadow-1" src="img/molecules.png" alt=""> </div>
+    </div>
+    <p class="medium strong margin-top-40">3. Design System Reference Site Concept</p>
+    <div class="row">
+      <div class="col-sm-8 m-auto"><img class="img-fluid material-shadow-1" src="img/design_system_mock.png" alt=""> </div>
+    </div>
           <nav class="col-sm-3 mt80" id="myScrollspy">
             <ul class="nav nav-pills flex-column sticky">
               <li class="nav-item"><a class="nav-link" href="#problem">The Problem</a></li>
@@ -120,7 +132,7 @@
               <li class="nav-item"><a class="nav-link" href="#highlight">Other Highlights</a></li>
             </ul>
           </nav>
-    <div class="col-sm-8 position-relative">
+    <div class="col-sm-9 position-relative">
       <div class="mt80" id="problem">
             <h4>The Problem</h4>
             <p class="medium">There is no comprehensive repository of recurring UI components and guidelines in either design or front-end development, which makes maintaining consistency throughout the platform a difficult and time-consuming task. Both design and development spend much time communicating about minute pixel details and it is affecting the efficiency of production. There is increasing need for a design system, a source of truth that integrates design and front-end.</p>
@@ -144,35 +156,48 @@
         <p class="medium">To tailor the current best practices to the needs of our team, we conducted 15 one-on-one interviews​ with designers, developers, and product managers, and generated over 500 notes. We made an affinity wall of these notes to tell the story of why we need a design system and how we can build a good one. </p>
         <p><img class="img-fluid" src="img/tele_affinity.png" alt=""></p>
         <p class="medium">I made a workflow map to highlight the current painpoints in our workflow and places where the design system can help improve.</p>
-        <div class="col-sm-10 m-auto"><img class="img-fluid" src="img/tele_workflow.png" alt=""></div>
+        <div class="col-sm-10 m-auto"><img class="img-fluid material-shadow-1" src="img/Artboard 1.png" alt=""></div>
       </div>
       <div id="auditing"> 
         <h4>UI Auditing</h4>
         <p class="medium">To analyze the current UI inconsistencies and start building standard UI componenets, I audited all the UI elements across the new cloud-based web applications with my fellow intern. We put the current UI components into emerging categories that will serve as the taxonomy of the new design system. We also categorized the current inconsistencies into visual design, interaction, functionalities, and code bugs.</p>
-        <div class="col-sm-10 m-auto"><img class="img-fluid" src="img/tele_ui.png" alt=""></div>
-      </div>   
-      <div id="solution">
+        <div class="col-sm-8 m-auto"><img class="img-fluid border" src="img/tele_ui.png" alt=""></div>
+      </div>  
+       <div id="solution">
             <p class="medium strong">Solution and Impact</p>
-            <p class="medium">First of all, we made <strong>suggestions on the workflow</strong>, including using new tools for design and collaboration; always reference the design system before adding a new pattern or interaction​; follow standard naming conventions for design files and CSS classes​; singular ownership of the CSS files and design system. Secondly, we built <strong>a prototype of the new design system website</strong> with side navigation and more comprehensive information. Finally, we suggested continue <strong>expanding and improving UI library and documentation</strong> based on our UI auditing work.</p>
-          <div class="row">
+            <p class="medium">At the end of the internship, we made the following suggestions:</p>
+            <ol>
+              <li class="medium"><strong>Improving the workflow: </strong>including using new tools for design and collaboration; always reference the design system before adding a new pattern or interaction​; follow standard naming conventions for design files and CSS classes​; singular ownership of the CSS files and design system</li>
+              <li class="medium"><strong>A design system website as the reference point for both designers and developers</strong></li>
+              <li class="medium"><strong>Continue expanding and improving UI componenet library and documentation</strong></li> 
+            </ol>
+<!--           <div class="row">
             <div class="col-sm-5 m-auto"><img class="img-fluid" src="img/tele_web.png" alt=""></div>
             <div class="col-sm-5 m-auto"><img class="img-fluid" src="img/tele_fluid.gif" alt=""></div>
             <div class="m-auto"><p>Desktop view and fluid layout in Sketch</p></div>
-          </div>
+          </div> -->
             <p class="medium">We presented our project to the entire technology team at the end of the internship and got stakeholder buy-in. Developers started asking when the design system will go live immediately after the presentation, and the design system project had a kick start.</p>
-            <p class="medium">During the internship, I utilized research insights and demonstrations to advocate the use of Sketch for building a component-driven UI library and a more efficient workflow. I successfully helped our design team transition from Photoshop and InDesign to Sketch. After the internship, I have been continuing to build the Sketch UI component library. Several developers have been building a Javascript plugin to connect our Sketch color palette to CSS variables and lay the foundation for a living design system that can always sync with the actual product.
+            <p class="medium">During the internship, I also demonstrated the advantage of using Sketch to build a component-driven design system and helped the team transition from other tools to Sketch. After the internship, I started building the Sketch web component library. Several developers have been building a Javascript plugin to connect our Sketch color palette to CSS variables and lay the foundation for a living design system that can stay in sync with the product.
             </p>
-        </div>  
+      </div>   
        <div id="highlight">
             <p class="medium strong">Other Highlights</p>
-            <p class="medium">I not only worked on the design system but also thought about different ways of improving the products. </p>
+            <p class="medium strong">Navigation</p>
+            <p class="medium">I not only worked on the design system but also thought about different ways of improving the products. One problem I found was that the current top navigation can have three levels of flyouts on hover. It becomes cumbersome and difficult for users to discover. I explored many different navigation options, among which side navigation and mega menu are the two most promising. Side navigation frees more vertical space and indicates user's current location in the complicated hierarchy, but it is harder to implement and may be too different for many users. Mega menu is good for handling three levels of hierarchy, but some tabs do not have that many links to fill a mega menu. </p>
           <div class="row">
-            <div class="col-sm-10 m-auto"><img class="img-fluid" src="img/tele_sidenav.gif" alt=""></div>
-            <div class="m-auto"><p>Side navigation layout for our web application to obtain more space for content</p></div>
+            <div class="col-sm-6 m-auto"><img class="img-fluid border" src="img/sidenav.png" alt=""></div>
+            <div class="col-sm-6 m-auto"><img class="img-fluid border" src="img/megamenu.png" alt=""></div>
           </div>
           <div class="row">
-            <div class="col-sm-5 m-auto"><img class="img-fluid" src="img/tele_surgeon.gif" alt=""></div>
-            <div class="m-auto"><p>Different approaches of a timeline view for surgeons</p></div>
+              <div class="col-sm-8 m-auto"><img class="img-fluid border" src="img/tele_sidenav.gif" alt=""></div>
+              <div class="m-auto"><p class="margin-top-10">Trying out Adobe XD when prototyping side navigation</p></div>
+          </div>
+          <div class="row">
+            <p class="medium strong">Surgeon Timeline</p>
+            <p class="medium">Involved in the mobile initiative, I brainstormed different ways of showing a surgeon's timeline. The start time of the procedures is usually scheduled beforehand, but the end time is unknown. The problem can be solved by either providing an estimation of the end time or showing the appointments with a gradient block in the schedule.</p>
+            <div class="col-sm-4 m-auto"><img class="img-fluid" src="img/surgeon1-1.png" alt=""></div>
+            <div class="col-sm-4 m-auto"><img class="img-fluid" src="img/surgeon2-1.png" alt=""></div>
+            <div class="col-sm-4 m-auto"><img class="img-fluid" src="img/surgeon3-1.png" alt=""></div>
             </div>
         </div>  
     </div>
