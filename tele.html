@@ -34,7 +34,7 @@
 
   </head>
 
-  <body data-spy="scroll" data-target="#myScrollspy" data-offset="0">
+  <body data-spy="scroll" data-target="#myScrollspy"  data-offset="150">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -109,7 +109,6 @@
 
 
 <div class="container">
-  <div class="row">
     <h4 class="mt80">Solution at a Glance</h4>
     <div class="col-sm-12"><p class="medium strong margin-15">1. Workflow Optimization</p></div>
     <div class="col-sm-12"><img class="img-fluid" src="img/workflow_solution.png" alt=""> </div>
@@ -120,8 +119,9 @@
     </div>
     <p class="medium strong margin-top-40">3. Design System Reference Site Concept</p>
     <div class="row">
-      <div class="col-sm-8 m-auto"><img class="img-fluid material-shadow-1" src="img/design_system_mock.png" alt=""> </div>
+      <div class="col-sm-8 m-auto"><img class="img-fluid" src="img/design.png" alt=""> </div>
     </div>
+  <div class="row">
           <nav class="col-sm-3 mt80" id="myScrollspy">
             <ul class="nav nav-pills flex-column sticky">
               <li class="nav-item"><a class="nav-link" href="#problem">The Problem</a></li>
@@ -133,11 +133,13 @@
             </ul>
           </nav>
     <div class="col-sm-9 position-relative">
-      <div class="mt80" id="problem">
+      <span class="anchor" id="problem"></span>
+      <div class="mt80">
             <h4>The Problem</h4>
             <p class="medium">There is no comprehensive repository of recurring UI components and guidelines in either design or front-end development, which makes maintaining consistency throughout the platform a difficult and time-consuming task. Both design and development spend much time communicating about minute pixel details and it is affecting the efficiency of production. There is increasing need for a design system, a source of truth that integrates design and front-end.</p>
       </div>
-      <div id="comparative">    
+     <span class="anchor" id="comparative"></span>
+      <div class="mt80">    
         <h4>Comparative Analysis</h4>
           <p class="medium">Facing the problem with little prior knowledge and guidance, I decided to start from comparative anlaysis and learn about current best practices. After analyzing eight of the best design systems on the market from four dimensions, we found that <strong>a good design system uses a taxonomy that fits the needs of the organization​, fits in the team's workflow, outlines clear solutions to complex design decisions, is easy to use and share, and is always in sync with the evolution of the product.</strong></p>
       <div class="row">
@@ -150,7 +152,8 @@
         <div class="m-auto"><p>The four demensions of a design system and common patterns of design system taxonomy</p></div>
       </div>
       </div>
-      <div id="interviews​">    
+      <span class="anchor" id="interviews​"></span>
+      <div class="mt80">    
         <h4>User Interviews</h4>
         <blockquote cite="Director of UX">We are only human. Currently we are relying on memory and communication. And we have the mentality and drive and communication in place, but the system is not there.</blockquote>
         <p class="medium">To tailor the current best practices to the needs of our team, we conducted 15 one-on-one interviews​ with designers, developers, and product managers, and generated over 500 notes. We made an affinity wall of these notes to tell the story of why we need a design system and how we can build a good one. </p>
@@ -158,12 +161,14 @@
         <p class="medium">I made a workflow map to highlight the current painpoints in our workflow and places where the design system can help improve.</p>
         <div class="col-sm-10 m-auto"><img class="img-fluid material-shadow-1" src="img/Artboard 1.png" alt=""></div>
       </div>
-      <div id="auditing"> 
+      <span class="anchor" id="auditing"></span>
+      <div class="mt80"> 
         <h4>UI Auditing</h4>
         <p class="medium">To analyze the current UI inconsistencies and start building standard UI componenets, I audited all the UI elements across the new cloud-based web applications with my fellow intern. We put the current UI components into emerging categories that will serve as the taxonomy of the new design system. We also categorized the current inconsistencies into visual design, interaction, functionalities, and code bugs.</p>
         <div class="col-sm-8 m-auto"><img class="img-fluid border" src="img/tele_ui.png" alt=""></div>
       </div>  
-       <div id="solution">
+      <span class="anchor" id="solution"></span>
+       <div class="mt80">
             <h4>Solution and Impact</h4>
             <p class="medium">At the end of the internship, we made the following suggestions:</p>
             <ol>
@@ -179,8 +184,9 @@
             <p class="medium">We presented our project to the entire technology team at the end of the internship and got stakeholder buy-in. Developers started asking when the design system will go live immediately after the presentation, and the design system project had a kick start.</p>
             <p class="medium">During the internship, I also demonstrated the advantage of using Sketch to build a component-driven design system and helped the team transition from other tools to Sketch. After the internship, I started building the Sketch web component library. Several developers have been building a Javascript plugin to connect our Sketch color palette to CSS variables and lay the foundation for a living design system that can stay in sync with the product.
             </p>
-      </div>   
-       <div id="highlight">
+      </div> 
+      <span class="anchor" id="highlight"></span>  
+       <div class="mt80">
             <h4>Other Highlights</h4>
             <p class="medium strong">Navigation</p>
             <p class="medium">I not only worked on the design system but also thought about different ways of improving the products. One problem I found was that the current top navigation can have three levels of flyouts on hover. It becomes cumbersome and difficult for users to discover. I explored many different navigation options, among which side navigation and mega menu are the two most promising. Side navigation frees more vertical space and indicates user's current location in the complicated hierarchy, but it is harder to implement and may be too different for many users. Mega menu is good for handling three levels of hierarchy, but some tabs do not have that many links to fill a mega menu. </p>
@@ -218,7 +224,7 @@
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li> -->
           <li class="list-inline-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="index.html#about">About</a>
           </li>
          <!--  <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">

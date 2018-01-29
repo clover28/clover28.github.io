@@ -44,16 +44,20 @@ a:hover {
   color: black;
 }
 
+/*a.navbar-brand {
+  color: #5f4b8b !important;
+}*/
+
 p a {
-  color: #FF5876;
+  color: #e72c63;
 }
 
 h4 a {
-  color: #FF5876;
+  color: #e72c63;
 }
 
 footer a {
-  color: #FF5876;
+  color: #e72c63;
 }
 
 ul, ol {
@@ -228,7 +232,7 @@ blockquote:after {
 }
 
 .content-section-a {
-  padding: 150px 0 100px 0;
+  padding: 100px 0 100px 0;
   background-color: #f8f8f8;
 }
 
@@ -238,8 +242,8 @@ blockquote:after {
 
 .content-section-b {
   padding: 100px 0;
-  border-top: 1px solid #e7e7e7;
-  border-bottom: 1px solid #e7e7e7;
+/*  border-top: 1px solid #e7e7e7;*/
+/*  border-bottom: 1px solid #e7e7e7;*/
 }
 
 .no-border {
@@ -366,7 +370,7 @@ p.copyright {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #AFE1F2;
+  background: #d32e5e;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -378,6 +382,7 @@ p.copyright {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
+
 
 .hvr-shutter-out-horizontal:before {
   content: "";
@@ -387,7 +392,7 @@ p.copyright {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #FFD8D4;
+  background: #d32e5e;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -402,7 +407,11 @@ p.copyright {
 
 
 
-.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active, .hvr-shutter-out-horizontal2:hover, .hvr-shutter-out-horizontal2:focus, .hvr-shutter-out-horizontal2:active {
+.hvr-shutter-out-horizontal:hover h2, .hvr-shutter-out-horizontal:focus h2, .hvr-shutter-out-horizontal:active h2, .hvr-shutter-out-horizontal2:hover h2, .hvr-shutter-out-horizontal2:focus h2, .hvr-shutter-out-horizontal2:active h2 {
+  color: white;
+}
+
+.hvr-shutter-out-horizontal:hover p, .hvr-shutter-out-horizontal:focus p, .hvr-shutter-out-horizontal:active p, .hvr-shutter-out-horizontal2:hover p, .hvr-shutter-out-horizontal2:focus p, .hvr-shutter-out-horizontal2:active p {
   color: white;
 }
 
@@ -414,6 +423,25 @@ p.copyright {
 .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before, .hvr-shutter-out-horizontal2:hover:before, .hvr-shutter-out-horizontal2:focus:before, .hvr-shutter-out-horizontal2:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+
+/* Grow Shadow */
+.hvr-grow-shadow {
+/*  display: inline-block;
+  vertical-align: middle;*/
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.07);
+  transform: scale(1.07);
 }
 
 .parallax-window-h {
@@ -441,7 +469,26 @@ p.copyright {
   margin-top: 10px;
 }
 
+.margin-top-50 {
+  margin-top: 50px;
+}
 
 .material-shadow-1 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+
+
+/*scrollspy help class*/
+.anchor{
+   display:block;
+   height: 1px; /* this is the height of your header */
+   margin-top:-67px; /* this is again negative value of the height of your header */
+   visibility:hidden;
+}
+
+
+.nav-pills .nav-link.active {
+  color: #fff;
+  background-color: #d32e5e !important;
+}
+
