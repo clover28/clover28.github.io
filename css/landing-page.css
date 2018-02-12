@@ -83,9 +83,9 @@ ul, ol {
 
 hr {
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0 !important;
     border: 0;
-    border-top: 2px solid rgba(175,172,193,1);
+    border-top: 1px solid #e8e8e8;
 }
 
 .content-section-a {
@@ -510,4 +510,21 @@ p.copyright {
   background-color: white;
 }
 
+.footer-link {
+  font-size: 1.3rem;
+  margin-right: 30px;
+}
+
+.more-projects {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.border-left {
+  border-left: 1px solid #e8e8e8;
+}
 
