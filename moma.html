@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MoMA Viz</title>
+	<style>
+		body {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			margin: 100px auto 0;
+			line-height: 1.3;
+			font-size: 60px;
+			font-weight: bold;
+		}
+
+		h2 {
+			font-weight: normal;
+		}
+
+		a {
+			color: grey;
+		}
+
+		.dividerthick {
+			    content: '';
+			    border: 3px solid rgb(194,194,194);
+			    margin: 50px auto 100px auto;
+			    width: 18%;
+			    display: block;
+		}
+
+		#map svg {
+			border: 1px #e5e5e5 solid;
+		}
+
+		.tip {
+			font-style: italic;
+			color: grey;
+		}
+
+		#timelineText{
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		#timelineText p {
+			width: 70%;
+			margin: auto;
+		}
+
+		#gender{
+			width: 20%;
+			float: left;
+			margin:0 auto;
+			text-align: center;
+		}
+		#placeholder{
+			width: 80%;
+			float: left;
+			margin:0 auto;
+			text-align: center;
+		}
+
+		.row {
+			margin:0 auto;
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+
+		.row:after {
+		    content: "";
+		    display: table;
+		    clear: both;
+		} 
+		#map{
+            position: relative;
+			width: 960px;
+			margin:0 auto;
+			text-align: center;
+			margin-bottom:50px;
+		}
+
+		.timeline{
+			margin-bottom:50px;
+		}
+
+		text.label{
+			font-size:0.8em;
+		}
+
+		.drop {
+			cursor: pointer;
+		}
+
+		.tooltip {
+			position: absolute;
+			background: #fff;
+			border: 3px solid #e7e7e7;
+			border-radius: 1rem;
+			padding: .5rem 1rem;
+			width: 30rem;
+			line-height: 1.4rem;
+		}
+
+		.tooltip::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -.65rem;
+			width: 1rem;
+			height: 1rem;
+			background: #fff;
+			border: 3px solid #e7e7e7;
+			border-width: 3px 0 0 3px;
+			transform: rotate(45deg);
+			z-index: 1;
+		}
+
+		.tooltip.left::before {
+			left: 1.65rem;
+		}
+
+		.tooltip.right::before {
+			right: 1.65rem;
+		}
+
+		.tooltip h3 {
+			font-size: 1rem;
+		}
+
+		.tooltip p {
+			font-size: .9rem;
+			color: grey;
+		}
+
+		#placeholder {
+			margin-bottom: 300px;
+		}
+
+		.genderTip {
+			font-size: 0.8em;
+			position: absolute;
+			display: none;
+			min-width: 50px;
+			height: auto;
+			background: none repeat scroll 0 0 mintcream;
+			border: 1px solid black;
+			padding: 5px;
+			text-align: center;
+		}
+		.mapLegend{
+			position: absolute;
+			left:30px;
+			bottom:10px;
+			background-color: rgba(245,255,250,0.7);
+			width: 200px;
+			height:200px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+		}
+		#map #legendwrapper{
+			border:none;
+		}
+
+
+    </style>
+</head>
+<body>
+<h1>When and Where<br>the Museum of Modern Art<br>Acquired Artworks</h1>
+<div class="dividerthick"></div>
+
+<div id = "map">
+	<p class="tip">Click on a country to see its artwork time line.</p>
+    <div class="mapLegend"></div>
+</div>
+
+<div class="row">
+	<div id="timelineText"></div>
+	<div id="gender"></div>
+	<div id="placeholder"></div>
+</div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.0/d3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://unpkg.com/event-drops@0.3.1-alpha4/dist/eventDrops.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.3/d3-legend.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+
+<script>
+	//map global variables
+	const countByCountry = d3.map();
+	var mapColorScale = d3.scaleThreshold().domain([100,500,1000,5000,10000]).range(['#feebe2','#fcc5c0','#fa9fb5','#f768a1','#dd3497','#ae017e','#7a0177'].slice(1));
+	//check if map is centered
+	var centered;
+
+
+	function draw(error,moma,countries) {
+		if (error) {
+			console.log(error);
+		}
+
+		//    data grouping for map
+		for (var country in moma){
+			var count = 0;
+			moma[country].forEach(function (obj) {
+				count += obj.data.length;
+			})
+			countByCountry.set(country,count)
+		}
+
+		var margin = {top: 0, right: 0, bottom: 0, left: 50},
+			width =960 - margin.left - margin.right,
+			height = 600 - margin.top - margin.bottom;
+
+
+		var svg = d3.select("#map")
+			.append("svg")
+			.attr("width", width)
+			.attr("height", height)
+			.append('g')
+			.attr("transform","translate("+margin.left+","+margin.top+")")
+			.attr('class', 'map');
+
+
+		var projection = d3.geoMercator()
+			.scale(120)
+			.translate( [width/2 , height / 1.5]);
+
+		var path = d3.geoPath().projection(projection);
+
+
+		var map = svg.append("g");
+		map.attr("class", "countries")
+			.selectAll("path")
+			.data(countries.features)
+			.enter().append("path")
+			.attr("d", path)
+			.style("fill", fillCountry)
+			.style('stroke', 'grey')
+			.style('stroke-width', 1.5)
+			.style("opacity",0.8)
+			.on("mouseover",function (d) {
+				d3.select(this).moveToFront();
+				d3.select(this).style("stroke", "orange");
+				d3.select(this).style("cursor", "pointer");
+
+			})
+			.on("mouseout",function (d) {
+				d3.select(this).style("stroke", "grey");
+				d3.select(this).style("cursor", "pointer");
+			})
+			.on("click",clicked);
+
+
+//		draw legend
+        var legendW = 200, legendH = 200;
+
+        d3.select(".mapLegend")
+			.append("svg")
+			.attr("id","legendwrapper")
+            .attr("width",legendW)
+            .attr("height",legendH)
+			.append("g")
+			.attr("transform", "translate(20,50)")
+            .attr("class", "legend");
+
+        var legend = d3.legendColor()
+            .labelFormat(d3.format(","))
+            .labels(d3.legendHelpers.thresholdLabels)
+			.title("Total artworks acquired")
+            .scale(mapColorScale);
+
+        d3.select(".legend")
+            .call(legend);
+
+		function clicked(d){
+			var countryName = d.properties.name;
+			var countryCount = countByCountry.get(countryName);
+			var x,y,k;
+//    if zoomed-in state is on
+			if (d && centered !== d){
+//        change the center of the projection
+				var centroid = path.centroid(d);
+				x = centroid[0];
+				y = centroid[1];
+				k=2;
+				centered = d;
+			} else {
+				x = width/2;
+				y = height/1.5;
+				k = 1;
+				centered = null;
+			}
+			map.selectAll("path")
+				.classed("active",centered && function (d) {
+					return d === centered;
+				});
+
+			map.transition()
+				.duration(750)
+				.attr("transform", "translate(" + width / 2 + "," + height / 1.5 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+				.style("stroke-width", 1.5 / k + "px");
+
+
+//        populate text
+			if (countryCount){
+				d3.select("#timelineText").html(
+					`<h2>MoMa has acquired a total of <strong>${countryCount}</strong> artworks from <strong>${countryName}</strong>.</h2><p class="tip">You can interact with the history time line down below. Zoom in/out to change time range. Hover on the circle to see
+				more info about individual artwork. You can also see artist gender distribution on the left. </p>`
+				)
+				//draw timeline
+				drawGenderDist(moma, countryName);
+				drawTimeline(moma,countryName);
+			} else{
+                d3.select("#genderSVG").remove();
+				d3.select('.event-drops-chart').remove();
+				d3.select('.tooltip').filter('.left').remove();
+				d3.select('.tooltip').filter('.right').remove();
+				d3.select("#timelineText").html(
+					`<p>Sorry, no data is available for ${countryName}</p>`
+				)
+			}
+
+		}
+	}
+
+	function fillCountry(d){
+		var countryName = d.properties.name;
+		var countryCount = countByCountry.get(countryName);
+		if (countryCount){
+			return mapColorScale(countryCount);
+		} else {
+			return "#d9d9d9";
+		}
+
+	}
+
+	function drawGenderDist(moma, country){
+		d3.select("#genderSVG").remove();
+		var svgWidth = 500;
+        var svgHeight = 1000;
+        var barWidth = 400;
+        var barheight = 15;
+        var yStart = 70;
+        var yMargin = 40;
+        var xStart = 200;
+		
+		var genderDist = [];
+		var temp = 0;
+		for (i in moma[country]) {
+			var numMale = 0;
+			var numFemale = 0;
+			var num = 0;
+			for (j in moma[country][i].data) {
+				num += 1;
+				try {
+					var genders = moma[country][i].data[j].artist_gender.trim().split(",");
+				}
+				catch(err) {
+					continue;
+				}
+				for (idx in genders) {
+					if (genders[idx] == "Male") {
+						numMale += 1;
+					} else {
+						numFemale += 1;
+					}
+				}
+				// if (moma[country][i].data[j].artist_gender == "Male") {
+				// 	numMale += 1;
+				// } else {
+				// 	numFemale += 1;
+				// }
+			}
+			var total = numMale + numFemale
+			genderDist.push({'name': moma[country][i].name, 'num': num, 'total': total, 'male': numMale, 'female': numFemale})
+		}
+		genderDist.sort(function(a, b){return b.num - a.num;})
+        var maletooltip = d3.select("#gender").append("div").attr('class','genderTip');
+        var femaletooltip = d3.select("#gender").append("div").attr('class','genderTip');
+		var genderScale = d3.scaleLinear()
+		                    .domain([genderDist[genderDist.length - 1].total, genderDist[0].total])
+		                    .range([30, 400]);
+
+		genderSVG = d3.select('#gender').append("svg").attr("id", "genderSVG").attr("width", svgWidth).attr("height", svgHeight);
+		
+		genderSVG.append('text').text('Male').attr("x", xStart-35).attr("y", yStart-10).attr("font-size", "14px");
+		genderSVG.append('text').text('Female').attr("x", xStart+5).attr("y", yStart-10).attr("font-size", "14px");
+		
+		genderBars = genderSVG.selectAll('rect').data(genderDist).enter();
+
+        var maleBars = genderBars.append('rect')
+            .attr("x", function(d) {if(d.male==0){return xStart;}else {return xStart - genderScale(d.male);}})
+            .attr("y", function(d, i) {return i*yMargin + yStart;})
+            .attr('width', function(d){if(d.male==0){return 0;}else {return genderScale(d.male);}})
+            .attr('height', barheight)
+            .style('fill', '#0c2c84');
+
+        maleBars.on("mouseover", function(d){
+            maletooltip
+                .style("left", d3.event.pageX +10 + "px")
+                .style("top", d3.event.pageY +10 + "px")
+                .style("display", "inline-block")
+                .html(`<p>Male artists in ${d.name} category: ${d.male}</p>`);
+        })
+            .on("mouseout", function(d){ maletooltip.style("display","none");});
+
+        var femaleBars = genderBars.append('rect')
+            .attr("x", xStart)
+            .attr("y", function(d, i) {return i*yMargin + yStart;})
+            .attr('width', function(d) {if(d.female==0){return 0;}else {return genderScale(d.female);}})
+            .attr('height', barheight)
+            .style('fill', '#FFB6C1');
+
+        femaleBars.on("mouseover", function(d){
+            console.log("hovered");
+            femaletooltip
+                .style("left", d3.event.pageX +10 + "px")
+                .style("top", d3.event.pageY +10 + "px")
+                .style("display", "inline-block")
+                .html(`<p>Female artists in ${d.name} category: ${d.female}</p>`);
+        })
+            .on("mouseout", function(d){ femaletooltip.style("display","none");});
+	}
+
+	function drawTimeline(moma,country){
+//    remove old timeline
+		d3.select('.event-drops-chart').remove();
+
+		const colors1 = d3.schemeCategory20;
+		const colors2 = d3.schemeDark2;
+		const colors = colors1.concat(colors2);
+		// const artwork = function(d){return d.title;}
+
+		const ShowTooltip = (artwork) => {
+			d3.select('#placeholder').selectAll('.tooltip').remove();
+			const FONT_SIZE = 16; // in pixels
+			const TOOLTIP_WIDTH = 30; // in rem
+			const t = d3.transition().duration(250).ease(d3.easeLinear);
+
+
+			const tooltip = d3.select('#placeholder')
+							.append('div')
+							.attr('class', 'tooltip')
+							.style('opacity', 0); // hide it by default
+			tooltip.transition(t)
+					.on('start', () => {
+						d3.select('.tooltip').style('display', 'block');
+					})
+					.style('opacity', 1);
+			const rightOrLeftLimit = FONT_SIZE * TOOLTIP_WIDTH;
+			const direction = d3.event.pageX > rightOrLeftLimit ? 'right' : 'left';
+
+			const ARROW_MARGIN = 1.65;
+			const ARROW_WIDTH = FONT_SIZE;
+			const left = direction === 'right'
+				? d3.event.pageX - rightOrLeftLimit
+				: d3.event.pageX - ((ARROW_MARGIN * (FONT_SIZE - ARROW_WIDTH)) / 2);
+
+			tooltip.html(`
+		        <div class="artwork">
+		            <img class="thumbnail" src="${artwork.thumbnail}" style="float:left;" alt="${artwork.title}" title="${artwork.title}" />
+		            <div class="content">
+		                <h3 class="title" style="font-weight:bold;">${artwork.title}</h3>
+		                <p>
+		                    <a href="https://en.wikipedia.org/wiki/${(artwork.artist).replace('' ,'_')}" class="artist">${artwork.artist}</a>
+		                </p>
+		                <p>Artist Gender: ${artwork.artist_gender}</p>
+		                <p>Prodction Date: ${artwork.production_date}</p>
+		                <p>Acquisition Date: ${artwork.date}</p>
+		            </div>
+		        </div>
+				`);
+
+			tooltip.style('left', `${left}px`)
+					.style('top', `${d3.event.pageY + 16}px`)
+					.classed(direction, true);
+        };
+		const hideTooltip = () => {
+			const t = d3.transition().duration(3000);
+
+			d3.select('.tooltip')
+				.transition(t)
+				.on('end', function end() {
+					this.remove();
+				})
+				.style('opacity', 0);
+		};
+
+		const eventDropsChart = d3.chart.eventDrops()
+			.start(new Date("1929-11-19"))
+			.end(new Date())
+			.eventLineColor((d, i) => colors[i])
+			.date(d => new Date(d.date))
+			.mouseover(d => ShowTooltip(d))
+			 .mouseout(hideTooltip)
+//            .click(d => ShowTooltip(d))
+			.margin({ top: 60, left: 0, bottom: 0, right: 50 })
+			.hasBottomAxis(false);
+
+		const chartData = moma[country];
+
+		chartData.sort(function (a,b) {
+			return b.data.length-a.data.length;
+		});
+
+		d3.select('#placeholder')
+			.datum(chartData)
+			.call(eventDropsChart);
+
+	}
+
+	d3.selection.prototype.moveToFront = function() {
+		return this.each(function(){
+			this.parentNode.appendChild(this);
+		});
+	};
+
+	d3.queue()
+		.defer(d3.json,"moma.json")
+		.defer(d3.json,"world_countries.json")
+		.await(draw);
+
+</script>
+
+</body>
+</html>
