@@ -29,6 +29,7 @@
     <!-- Custom fonts for this template -->
 <!--     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:300,400" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/landing-page.css" rel="stylesheet">
@@ -37,7 +38,7 @@
 
   <body data-spy="scroll" data-target="#myScrollspy" data-offset="150">
 
-    <!-- Navigation -->
+  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Wei Cai</a>
@@ -115,51 +116,65 @@
     </section>
 
 
-
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12"><img class="img-fluid" src="img/hyecho_opening.png" alt=""></div>
-          <nav class="col-sm-3 mt80" id="myScrollspy">
-            <ul class="nav nav-pills flex-column sticky">
-              <li class="nav-item"><a class="nav-link" href="#challenge">The Challenge</a></li>
-              <li class="nav-item"><a class="nav-link" href="#empathize">Empathize and Define</a></li>
-              <li class="nav-item"><a class="nav-link" href="#ideation">Ideation and Change</a></li>
-              <li class="nav-item"><a class="nav-link" href="#testing">Usability Testing</a></li>
-              <li class="nav-item"><a class="nav-link" href="#ipad">Making of the iPad App</a></li>
-              <li class="nav-item"><a class="nav-link" href="#icon">Icon and Illustrations</a></li>
-            </ul>
-          </nav>
-    <div class="col-sm-9 position-relative">
+    <div class="col-lg-8 m-auto"><img class="img-fluid" src="img/hyecho_opening.png" alt=""></div>
+  <nav class="col-sm-12 pl40 sticky front1 bg-white" id="myScrollspy">
+    <ul class="nav nav-pills col-lg-8 m-auto">
+      <li class="nav-item"><a class="nav-link" href="#challenge">Design Process</a></li>
+      <li class="nav-item"><a class="nav-link" href="#empathize">Empathize and Define</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ideation">Ideation and Change</a></li>
+      <li class="nav-item"><a class="nav-link" href="#testing">Usability Testing</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ipad">Making of the iPad App</a></li>
+      <li class="nav-item"><a class="nav-link" href="#icon">Icon and Illustrations</a></li>
+    </ul>
+</nav>
+    <div class="col-sm-12 mt20 position-relative">
       <span class="anchor" id="challenge"></span>
       <div class="mt80">
-            <h4>The Challenge</h4>
+            <h4>Design Process</h4>
             <p class="medium">Our sponsors asked for a mobile app about Hyecho (a young Korea monk in the 2nd century, which is also the protagonist in their newly published book) that can enhance the visiting experience in an upcoming Buddhist art exhibition, increase young people’s interest in Buddhist art, and have educational value beyond and after the exhibit. We helped them prioritize their goals through user research. Half way through the project, we found out that the museum is developing similar products and that museum curators are also stakeholders in this project. We needed to switch gear for the mobile app and deliver an ipad app in a short time. I have been challenged to adapt to the tension between what stakeholders want and what users need, between our assumptions and the changing project requirements.</p>
+            <div class="row full-width-sm">
+              <div class="col-sm-12">
+                <img class="img-fluid material-shadow-1" src="img/process.png" alt="">
+              </div>
         </div>
        <span class="anchor" id="empathize"></span>
       <div class="mt80">
             <h4>Empathize and Define</h4>
-<!--             <br> -->
-<!--               <div class="col-sm-12"><img class="img-fluid" src="img/hyecho_VPC.png">
-              <p class="text-center">We used value proposition canvas to translate user needs into product ideas</p>
-            </div> -->
-            <p class="medium strong">Competitive Analysis</p>
-            <p class="medium">We looked into the existing apps for museums and exhibitions, and highlighted features including gamification, different ways of sorting objects, showing relationship between objects, and social interaction.</p>
+            <p class="medium strong">Research Insights</p>
+            <p class="medium">To understand user needs and current design patterns in the museum app space, we conducted comparative analysis and user research.</p>
+            <ol class="counter">
+              <li>
+                <p class="medium">Comparative Analysis</p>
+                <p>We looked into the existing apps for museums and exhibitions, and highlighted features that are important and innovative for us, such as <strong>gamification, providing different ways of sorting objects, revealing relationship between objects, and social interaction</strong>.</p>
+              </li>
+              <li>
+                <p class="medium">21 in-person interviews</p>
+                <p>We found two pain points that need to be addressed: <br>Most people do not see a companion app for an exhibit necessary <br>Most people associate Buddhism and art exhibit with being boring</p>
+              </li>
+              <li>
+                <p class="medium">32 Survey Responses</p>
+                <p>93% of the respondents find audio guide helpful in perceiving new information<br>75% percent of them have used audio guide</p>
+              </li>
+            </ol>
+<!--             <p class="medium">We looked into the existing apps for museums and exhibitions, and highlighted features including gamification, different ways of sorting objects, showing relationship between objects, and social interaction.</p>
             <p class="medium strong">User Interviews</p>
             <p class="medium">We conducted 21 in-person user interviews and used the value proposition canvas to align user needs to our product direction. We found two pain points that need to be addressed: <strong>1) many people do not see a companion app for an exhibit necessary; 2) many people associate Buddhism and art exhibit with being boring</strong>.</p>
             <p class="medium strong">Survey</p>
-            <p class="medium">To relieve the first pain point found in the interviews, we referred to users’ need of extra information and decided to add audio guide to the app. We conducted a survey on audio guide and received 32 responses. We found that <strong>93% of the respondents find audio guide helpful in perceiving new information, and 75% percent of them have used audio guide</strong> in a museum.</p>
-            <p class="medium strong">Data from the Museum</p>
-            <p class="medium">We requested a visitor study report from the museum, which contains over 1500 entrance-exit surveys, an observation study, and an interview study with over 70 interviews. We got robust information on the demographics and behaviors of the visiters, which helped us create our personas.</p>
-
-            <div class="row">
-              <div class="col-sm-4 mt20 mb0"><a href="img/hyecho_persona1.png"><img class="img-fluid" src="img/hyecho_persona1.png" alt=""></a></div>
-              <div class="col-sm-4 mt20 mb0"><a href="img/hyecho_persona2.png"><img class="img-fluid" src="img/hyecho_persona2.png" alt=""></a></div>
-              <div class="col-sm-4 mt20 mb0"><a href="img/hyecho_persona3.png"><img class="img-fluid" src="img/hyecho_persona3.png" alt=""></a></div>
+            <p class="medium">To relieve the first pain point found in the interviews, we referred to users’ need of extra information and decided to add audio guide to the app. We conducted a survey on audio guide and received 32 responses. We found that <strong>93% of the respondents find audio guide helpful in perceiving new information, and 75% percent of them have used audio guide</strong> in a museum.</p> -->
+            <p class="medium strong">Personas</p>
+            <p class="medium">We requested a visitor study report from the museum, which contains over 1500 entrance-exit surveys, an observation study, and an interview study with over 70 interviews. We got robust information on the demographics and behaviors of the visitors, which helped us create our personas.</p>
+            <div class="row full-width grey-bg">
+              <div class="col-sm-4 m-auto"><a href="img/h_persona1.png"><img class="img-fluid" src="img/h_persona1.png" alt=""></a></div>
+              <div class="col-sm-4 m-auto"><a href="img/h_persona2.png"><img class="img-fluid" src="img/h_persona2.png" alt=""></a></div>
+              <div class="col-sm-4 m-auto"><a href="img/h_persona3.png"><img class="img-fluid" src="img/h_persona3.png" alt=""></a></div>
             </div>
-            <div class="col-sm-12"><a href="img/hyecho_experiencemap.png"><img class="img-fluid material-shadow-1" src="img/hyecho_experiencemap.png" alt=""></a>
-              <p class="text-center margin-top-10">I made an journey map illustrating the experience of our main persona</p>
+            <p class="medium">This wide range of audience presented big challenge for prioritizing features. Since our stakeholders care most about attracting young students to this field and topic, we picked our main persona and dived deeper into her journey to define the major flow of the application. </p>
+            <div class="full-width grey-bg"><a href="img/hyecho_experiencemap.png"><img class="img-fluid" src="img/hyecho_experiencemap.png" alt=""></a>
+              <p class="caption">I made an experience map illustrating the visiting experience and pain points of our main persona</p>
             </div>
-          </div>
+        </div>
       <span class="anchor" id="ideation"></span>
       <div class="mt80">    
         <h4>Ideation and Change</h4>
@@ -168,23 +183,26 @@
           <p class="medium">Therefore, our app provides two options upon opening: 1) following a structured journey that ties the objects to Hyecho's journey; 2) browsing and searching for objects in an object inventory. To engage visitors, especially younger visitors who are like our persona David, we design fun interactions that tells interesting facts about the artworks. We also designed leveled audio guides that allow users to choose the type of content they want to hear.</p>
           <p class="medium">One big difficulty was to connect the exhibition objects to Hyecho, because they are different kinds of Buddhist artworks from different time periods and are not necessarily related to Hyecho. We finally managed to group 21 objects by their geographical locations and map to the areas Hyecho went to in the 2nd century.</p>
           <div class="row">
-              <div class="col-sm-4 mt20 mb0"><a href="img/hyecho_storyboard.png"><img class="img-fluid" src="img/hyecho_storyboard.png" alt=""></a></div>
-              <div class="col-sm-4 mt20 mb0"><a href="img/hyecho_prototype2.gif"><img class="img-fluid" src="img/hyecho_prototype2.gif" alt=""></a></div>
-              <div class="col-sm-4 mt20 mb0"><a href="img/hyecho_prototype1.gif"><img class="img-fluid" src="img/hyecho_prototype1.gif" alt=""></a></div>
-              <div class="col-sm-12 mb0"><p class="text-center margin-top-10">Storyboards and low-fidelity prototypes used to communicate initial ideas with stakeholders</p></div>
+              <div class="col-sm-6 mt20 mb0"><a href="img/hyecho_storyboard.png"><img class="img-fluid material-shadow-1" src="img/hyecho_storyboard.png" alt=""></a></div>
+<!--               <div class="col-sm-4 mt20 mb0"><a href="img/hyecho_prototype2.gif"><img class="img-fluid" src="img/hyecho_prototype2.gif" alt=""></a></div> -->
+              <div class="col-sm-6 mt20 mb0"><a href="img/hyecho_prototype1.gif"><img class="img-fluid material-shadow-1" src="img/hyecho_prototype1.gif" alt=""></a></div>
+              <div class="col-sm-12 mb0"><p class="caption">I used storyboards and low-fidelity prototypes to communicate initial ideas with stakeholders</p></div>
+          </div>
+
+          <div class="row full-width grey-bg">
               <div class="col-sm-12 mb0"><a href="img/hyecho_flowchart.png"><img class="img-fluid" src="img/hyecho_flowchart.png"></a>
-                  <p class="text-center">I put together app flow version 1 with the help of Rebecca and Sindhu</p>
+                  <p class="caption">I put together app flow version 1 with the help of Rebecca and Sindhu</p>
              </div>
           </div>
           <p class="medium strong">"Plot Twist"</p>
           <p class="medium">At the end of April, we had our first meeting with people from the museum. To our surprise, instead of having 21 objects, there are actually only 8 objects in the Hyecho related exhibition, which meant that our object-centered design and object groupings do not work anymore. The museum is also developing a series of "podcasts" that will serve as 20 minute audio guides. Our initial idea about the phone app overlaps too much with what they were developing. The museum also wants to put tethered iPads beneath Hyecho's statue and wants us to develop a tablet app for the devices, which is a brand new requirement. We did not know that the team at the museum are also important stakeholders until midway through the project.</p>
           <p class="medium">After taking some deep breaths, we came together and started brainstorming alternative directions for our phone app and how the two apps can compliment each other. After going through the new object selection, the content of the book written about Hyecho, and rounds of sketches, we decided to make our phone app a narrative about Hyecho's pilgrimage, divided into 8 chapters, and weave the objects into it, instead of being centred around objects. Our tablet app will be an interactive map that introduces the important locations related to Buddha's life that Hyecho went to, which will provide simple, informative experience on the tethered apps. </p>
-            <div class="row">
-              <div class="col-sm-12 mb0">
-                <a href="img/hyecho_FSworkflow.png"><img class="img-fluid" src="img/hyecho_FSworkflow.png"></a>
-                <a href="img/hyecho_workflow.png"><img class="img-fluid" src="img/hyecho_workflow.png"></a>
-                  <p class="text-center">The new app flow keeps the two options, one for a linear experience and the other for free exploration;</p>
-             </div>
+          <div class="row full-width-sm">
+            <div class="col-sm-12">
+              <img class="img-fluid material-shadow-1" src="img/hyecho_FSworkflow.png" alt="">
+              <a href="img/hyecho_workflow.png"><img class="material-shadow-1 img-fluid" src="img/hyecho_workflow.png"></a>
+              <p class="caption">The new app flow keeps the two options, one for a linear experience and the other for free exploration</p>
+            </div>
           </div>
       </div>
       <span class="anchor" id="testing"></span>
@@ -193,39 +211,39 @@
         <p class="medium">We conducted one round of in-person usability testing in the summer and it helped us resolve our mobile app navigation. In the initial design, we used the commonly adopted bottom navigation bar and top status bar with a back button. In our new design, we have eight chapters and each chapter contains an introduction page, an object page, and an interaction page. There is increased need to go back and forward between these pages. iPhones are also getting bigger and I started to see iOS apps put important functionalities at the bottom closer to the thumb. We decided to put back and forward buttons at the bottom and use the infamous hamburger menu to contain pages that will not be frequently used. </p>
         <p class="medium">We asked users to compare the two navigation models with prototypes and found that the bottom back and forth button with hamburger menu is preferred. In our latest testing with the launched app, over 85% of users do not have any difficulties navigating the app.</p>
         <p class="medium">Before launching the app, we conducted 9 structured usability tests and guerrilla usability tests. We modified the app based on user feedback and summarized spaces for improvement for our clients.</p>
-        <div class="row">
-              <div class="col-sm-4 mt20 mb0"><img class="img-fluid" src="img/hyecho_test1.png" alt=""></div>
-              <div class="col-sm-4 mt20 mb0"><img class="img-fluid" src="img/hyecho_test2.png" alt=""></div>
-              <div class="col-sm-4 mt20 mb0"><img class="img-fluid" src="img/hyecho_test3.png" alt=""></div>
-              <div class="col-sm-12 mb0"><p class="text-center margin-top-10">Two test models and the final design</p></div>
+        <div class="row full-width-sm">
+              <div class="col-sm-4 mb0"><p class="caption">Test Option 1</p><img class="img-fluid" src="img/hyecho_test1.png" alt=""></div>
+              <div class="col-sm-4 mb0"><p class="caption">Test Option 2</p><img class="img-fluid" src="img/hyecho_test2.png" alt=""></div>
+              <div class="col-sm-4 mb0"><p class="caption">Final Design</p><img class="img-fluid" src="img/hyecho_test3.png" alt=""></div>
         </div>
       </div> 
       <span class="anchor" id="ipad"></span>  
       <div class="mt80">    
         <h4>Making of the iPad App </h4>
-        <p class="medium">It was summer break after the big change in stakeholder requirements and app flow. I did an <a href="tele.html" target="_blank">internship at Teletracking</a> and designed the ipad app during my time after work. After deciding on the structure with stakeholders, I iterated on the visual style of the app to make it more eye-catching and fun.</p>
-        <div class="col-sm-12"><img class="img-fluid" src="img/hyecho_ipad1.png" alt="">
-          <p class="text-center">Early concepts including a comic book inspired layout</p>
-          <a href="img/hyecho_ipad2.png"><img class="img-fluid" src="img/hyecho_ipad2.png" alt=""></a>
-          <p class="text-center">Version 1: Using the same colors as the mobile app, but feels too serious</p>
-          <img class="img-fluid border material-shadow-1 margin-top-40" src="img/hyecho_ipadstyle.png" alt="">
-          <p class="text-center margin-top-10">New color palette inspired by the rich colors of Buddhist art</p></div>
+        <p class="medium">It was summer break after the big change in stakeholder requirements and app flow. I did an <a href="tele.html" target="_blank">internship at Teletracking</a> and designed the ipad app during my time after work. After deciding on the structure with stakeholders, I iterated on the visual design of the app and picked a Buddhist art inspired colorful palette to make it more eye-catching and fun.</p>
+        <div class="row full-width-sm grey-bg">
+          <div class="col-sm-12">
+           <!--  <img class="img-fluid" src="img/hyecho_ipad1.png" alt="">
+            <p class="caption">Early concepts including a comic book inspired layout</p>
+            <a href="img/hyecho_ipad2.png"><img class="img-fluid" src="img/hyecho_ipad2.png" alt=""></a>
+            <p class="caption">Version 1: Using the same colors as the mobile app, but feels too serious</p> -->
+            <img class="img-fluid border margin-top-40" src="img/hyecho_ipadstyle.png" alt="">
+<!--             <p class="caption">New color palette inspired by the rich colors of Buddhist art</p></div> -->
+          </div>
       </div>
       <span class="anchor" id="icon"></span> 
       <div class="mt80">    
         <h4>Icon and Illustrations</h4>
         <p class="medium">I designed the icon for our apps and made illustrations to enhance the immersiveness of our interactions.</p>
-        <div class="row">
-        <div class="col-sm-4">
-          <img class="img-fluid" src="img/hyecho_icon.png" alt="">
-        </div>
-        <div class="col-sm-6">
+        <div class="row full-width-sm">
+        <div class="col-sm-12">
           <img class="img-fluid" src="img/hyecho_illo.png" alt="">
         </div>
       </div>
     </div>
     </div>
   </div>
+</div>
 </div>
 
  <!-- More projects -->

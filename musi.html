@@ -29,15 +29,17 @@
     <!-- Custom fonts for this template -->
 <!--     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet"> -->
+     <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:300,400" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link href="css/lightbox.min.css" rel="stylesheet">
     <link href="css/landing-page.css" rel="stylesheet">
 
   </head>
 
   <body data-spy="scroll" data-target="#myScrollspy" data-offset="150">
 
-    <!-- Navigation -->
+  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Wei Cai</a>
@@ -112,18 +114,26 @@
 
 
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-        <h4 class="mt80">Introducing Musi (Video contains sound)</h4>
+    <div class="col-lg-6 m-auto">
+        <h4 class="margin-top-80">Introducing Musi (Video contains sound)</h4>
         <p class="medium">Musi is a foot-controlled device that allows classical musicians to easily record their practice sessions to share with their peers, instructors, and others in their network. It connects musicians through asynchronous practice and reflection.</p>
-      <div class="col-sm-12 m-auto text-center">
+    </div>
+    <div>
+      <div class="row m-auto">
+      <div class="col-lg-8 m-auto text-center">
         <iframe width="840" height="472.5" src="https://www.youtube.com/embed/zc-hy-r-yGQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class="col-sm-10 m-auto">
+      </div>
+      <div class="row">
+      <div class="col-lg-8 m-auto">
         <img class="img-fluid" src="img/musi_buttons.png" alt="">
       </div>
-      <nav class="col-sm-3 mt80" id="myScrollspy">
-        <ul class="nav nav-pills flex-column sticky">
+    </div>
+    </div>
+      <nav class="col-sm-12 pl40 sticky front1 bg-white" id="myScrollspy">
+        <ul class="nav nav-pills col-lg-8 m-auto">
           <li class="nav-item"><a class="nav-link" href="#study">Formative Study</a></li>
           <li class="nav-item"><a class="nav-link" href="#ideation">Ideation</a></li>
           <li class="nav-item"><a class="nav-link" href="#prototyping">Prototyping</a></li>
@@ -131,7 +141,7 @@
           <li class="nav-item"><a class="nav-link" href="#next">Next Steps</a></li>
         </ul>
       </nav>
-      <div class="col-sm-9 position-relative">
+      <div class="col-sm-12 position-relative">
         <span class="anchor" id="study"></span>
         <div class="mt80">    
           <h4>Formative Study</h4>
@@ -145,11 +155,15 @@
             </ul>
             <p class="medium strong">Cultural Probe</p>
             <p class="medium">Using our key design questions as a guide, we used the method of cultural probes to better understand the values, attitudes, and emotions musicians have towards technological innovations in music. We provided sketch books with instructions as probe prompts to 3 undergraduate music majors. Participants had 5 days to complete the activities at their leisure. Upon collection of the journals, we conducted short debriefing interviews.</p>
-            <div class="col-sm-10 m-auto"><img class="img-fluid" src="img/probes.png"></div>
-            <div class="col-sm-10 m-auto"><img class="img-fluid" src="img/probe_response.png"></div>
+            <div class="row full-width-sm">
+              <div class="col-lg-8 m-auto"><img class="img-fluid" src="img/probes.png"></div>
+              <div class="col-lg-8 m-auto"><img class="img-fluid" src="img/probe_response.png"></div>
+            </div>
             <p class="medium strong margin-top-20">Data Analysis and Insights</p>
             <p class="medium">We created an affinity diagram to derive the key insights from our observation, interviews, and cultural probes.</p>
-            <div class="col-sm-10 m-auto"><img class="img-fluid" src="img/musi_affinity.png"></div>
+            <div class="row full-width-sm">
+              <div class="col-sm-10 m-auto"><a href="img/musi_affinity.png" data-lightbox="image-1" data-title="affinity"><img class="img-fluid material-shadow-1" src="img/musi_affinity.png"></a></div>
+            </div>
             <p class="medium">We found that:</p>
               <ul class="medium">
                 <li>Classical musicians value their existing culture, practices, and boundaries, and dreamed up subtle ways to strengthen their bonds with their musical community instead of radical technological transformations</li>
@@ -161,12 +175,14 @@
         <div class="mt80">
             <h4>Ideation</h4>
             <p class="medium">Based on our research insights, we individually sketched 14 concepts and narrowed them down by <strong>acceptability in the classical musician community</strong>, <strong>level of impact</strong>, and <strong>unobtrusiveness</strong>. The mat idea I sketched was selected and turned into our final product</p>
-            <div class="col-sm-10 m-auto"><img class="img-fluid material-shadow-1" src="img/mat_storyboard1.jpg"></div>
-            <p class="text-center margin-top-10">The original looping mat storyboard</p>
+            <div class="row full-width-sm">
+              <div class="col-lg-6 m-auto"><img class="img-fluid material-shadow-1" src="img/mat_storyboard1.jpg">
+                <p class="caption">The original looping mat storyboard</p></div>
+            </div>
             <p class="medium strong">User Enactments</p>
             <p class="medium">We took this concept back to our target users in the form of user enactments to validate our assumptions and generate more concrete design ideas. We used cardboard and paper to create the mat and buttons. We designed a test script containing 5 different scenarios to obtain user feedback on individual use, group use, and different types of button feedback.</p>
             <p class="medium">We set up our prototype materials in a music practice room and recruited music students passing by (with &#x1F36A; as incentives). Participants engaged in the enactments individually, with team members taking turns as moderator, note taker, and photographer. Participants were asked to manipulate the prototypes for comfort and ease of interaction: they could adjust the mat’s placement, select buttons they found appropriate for the scenario, and then place the buttons on the mat where they liked.</p>
-            <div class="row">
+            <div class="row full-width-sm">
               <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_participant.png"></div>
               <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_ue.png"></div>
             </div>
@@ -180,7 +196,7 @@
               <li>Participants said they would find the process of organizing and reviewing large batches of tracks more manageable on different device, like their phone or laptop, while the mat would be more useful for operating functions that more immediately support them as they play</li>
             </ul>
             <p class="medium">Based on these findings, we decreased the size of our mat and added a screen/speaker part to display sound wave information and deliver high-quality sound. I created a story board for the refined design:</p>
-            <div class="col-sm-12"><img class="img-fluid" src="img/musi_storyboard2.png"></div>
+            <div class="row full-width-sm"><img class="img-fluid material-shadow-1" src="img/musi_storyboard2.png"></div>
         </div>
         <span class="anchor" id="prototyping"></span>
         <div class="mt80">
@@ -189,31 +205,33 @@
             <p class="medium">I was responsible for the look and feel of the physical product. I sketched a series of different fold-able structures and created mood boards to explore different aesthetic directions. Since the classical musician community highly value traditions, we went with a vintage inspired look with wooden texture.</p>
             <div class="col-sm-12"><img class="img-fluid" src="img/musi_look_sketch.png"></div>
             <p class="medium">We iterated on the appearance of the product with 3D models. We laser cut the wooden part of the prototype and used vinyl fabric and cupboard liners to make the mat part.</p>
-            <div class="col-sm-12"><img class="img-fluid" src="img/musi_sketchup.jpg"></div>
-            <div class="row">
-              <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_a.jpg"></div>
-              <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_c.jpg"></div>
+            <div class="row full-width-sm">
+              <div class="col-sm-12"><img class="img-fluid" src="img/musi_sketchup.jpg"></div>
+              <div class="row">
+                <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_a.jpg"></div>
+                <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_c.jpg"></div>
+              </div>
             </div>
             <p class="medium strong">Backend</p>
             <p class="medium">We used a laptop to act as our primary computation and recording device. We used Waveform Playlist, an open source audio recording tool, to support our recording and playback features as well as to visualize the audio waveforms. We mirrored this graphical user interface onto an iPad, which we placed onto the prototype prism as a way of demonstrating implementation of the Musi screen. We used a Particle Photon to prototype the buttons on the physical device.</p>
-            <div class="row">
+            <div class="row full-width-sm">
               <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_footoverproto.png"></div>
               <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_photon.png"></div>
             </div>
            <p class="medium strong">Companion App</p>
            <p class="medium">I prototyped the companion mobile app using Sketch and InVision. Users can interact with the app prototype to experience the full use scenario, but actual syncing of tracks requires the laptop to load playable tracks onto the physical prototype’s GUI.</p>
-           <div class="col-sm-12 m-auto text-center">
+            <div class="col-lg-12">
              <iframe width="700" height="394" src="https://www.youtube.com/embed/rYeI8TXb18M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-           </div>
+            </div>
         </div>
         <span class="anchor" id="testing"></span>
         <div class="mt80">
             <h4>User Testing</h4>
             <p class="medium">We tested our design in two contexts. We set up our working prototype in a music practice room and invited music students passing by to record and playback tracks. We also invited attendees at a university design exposition to use our prototype. We were able to identify areas to drive future design work and help us realize an ideal concept.</p>
-            <div class="row mb0">
+            <div class="row full-width-sm">
               <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_cello.jpg"></div>
               <div class="col-sm-6 mt20 mb0"><img class="img-fluid" src="img/musi_expo.jpg"></div>
-              <div class="col-sm-12 text-center margin-top-10 mb0"><p>Left: A cello student using our prototype; right: Me showing an attendee how to use the prototype</p></div>
+              <div class="col-sm-12"><p class="caption">Left: A cello student using our prototype; right: Me showing an attendee how to use the prototype</p></div>
             </div>
             <p class="medium">We reflected on the following aspects after testing the prototype with users:</p>
             <ul class="medium">
@@ -314,6 +332,7 @@
     <script src="vendor/parallax.js-1.4.2/parallax.min.js" defer></script>
     <script src="vendor/popper/popper.min.js" defer></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="vendor/lightbox.min.js" defer></script>
 
   </body>
 

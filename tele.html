@@ -28,6 +28,7 @@
     <!-- Custom fonts for this template -->
 <!--     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:300,400" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/landing-page.css" rel="stylesheet">
@@ -36,7 +37,7 @@
 
   <body data-spy="scroll" data-target="#myScrollspy"  data-offset="150">
 
-    <!-- Navigation -->
+  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Wei Cai</a>
@@ -111,22 +112,29 @@
 
 
 
-<div class="container">
-    <h4 class="mt80">Solution at a Glance</h4>
-    <div class="col-sm-12"><p class="medium strong margin-15">1. Workflow Optimization</p></div>
-    <div class="col-sm-12"><img class="img-fluid" src="img/workflow_solution.png" alt=""> </div>
+<div class="container-fluid">
+    <div class="col-lg-8 m-auto">
+      <h4 class="margin-top-80">Solution at a Glance</h4>
+      <p class="medium strong margin-15">1. Workflow Optimization</p>
+    </div>
+    <div class="col-lg-8 m-auto"><img class="img-fluid" src="img/workflow_solution.png" alt="">
     <p class="medium strong margin-top-40">2. Web Component Library</p>
-    <div class="row">
+     </div>
+    <div class="row col-lg-8 m-auto">
       <div class="col-sm-6 m-auto"><img class="img-fluid material-shadow-1" src="img/atoms.png" alt=""> </div>
       <div class="col-sm-6 m-auto"><img class="img-fluid material-shadow-1" src="img/molecules.png" alt=""> </div>
     </div>
-    <p class="medium strong margin-top-40">3. Design System Reference Site Concept</p>
     <div class="row">
-      <div class="col-sm-8 m-auto"><img class="img-fluid" src="img/design.png" alt=""> </div>
+      <div class="col-lg-8 m-auto">
+        <p class="medium strong margin-top-40">3. Design System Reference Site Concept</p>
+      </div>
+      <div class="col-lg-6 m-auto">
+          <img class="img-fluid" src="img/design.png" alt=""> 
+        </div>
     </div>
   <div class="row">
-          <nav class="col-sm-3 mt80" id="myScrollspy">
-            <ul class="nav nav-pills flex-column sticky">
+          <nav class="col-sm-12 pl40 sticky front1 bg-white" id="myScrollspy">
+            <ul class="nav nav-pills col-lg-8 m-auto">
               <li class="nav-item"><a class="nav-link" href="#problem">The Problem</a></li>
               <li class="nav-item"><a class="nav-link" href="#comparative">Comparative Analysis</a></li>
               <li class="nav-item"><a class="nav-link" href="#interviews​">User Interviews</a></li>
@@ -135,7 +143,7 @@
               <li class="nav-item"><a class="nav-link" href="#highlight">Other Highlights</a></li>
             </ul>
           </nav>
-    <div class="col-sm-9 position-relative">
+    <div class="col-sm-12 position-relative">
       <span class="anchor" id="problem"></span>
       <div class="mt80">
             <h4>The Problem</h4>
@@ -146,29 +154,39 @@
         <h4>Comparative Analysis</h4>
           <p class="medium">Facing the problem with little prior knowledge and guidance, I decided to start from comparative anlaysis and learn about current best practices. After analyzing eight of the best design systems on the market from four dimensions, we found that <strong>a good design system uses a taxonomy that fits the needs of the organization​, fits in the team's workflow, outlines clear solutions to complex design decisions, is easy to use and share, and is always in sync with the evolution of the product.</strong></p>
       <div class="row">
-        <div class="col-lg-6 mr-auto">
+          <div class="col-sm-12 text-center">
               <img class="img-fluid" src="img/tele_comparativeAnalysis.png" alt="">
+              <p class="caption">Four dimensions of the comparative analysis</p>
         </div>
-        <div class="col-lg-6 mr-auto">
+      </div>
+      <div class="row full-width grey-bg">
+        <div class="col-sm-12 text-center">
               <img class="img-fluid" src="img/tele_taxonomy.png" alt="">
         </div>
-        <div class="m-auto"><p>The four demensions of a design system and common patterns of design system taxonomy</p></div>
+        <div class="m-auto"><p class="caption">Common patterns of design system taxonomy</p></div>
       </div>
       </div>
       <span class="anchor" id="interviews​"></span>
       <div class="mt80">    
         <h4>User Interviews</h4>
         <blockquote cite="Director of UX">We are only human. Currently we are relying on memory and communication. And we have the mentality and drive and communication in place, but the system is not there.</blockquote>
-        <p class="medium">To tailor the current best practices to the needs of our team, we conducted 15 one-on-one interviews​ with designers, developers, and product managers, and generated over 500 notes. We made an affinity wall of these notes to tell the story of why we need a design system and how we can build a good one. </p>
-        <p><img class="img-fluid" src="img/tele_affinity.png" alt=""></p>
-        <p class="medium">I made a workflow map to highlight the current painpoints in our workflow and places where the design system can help improve.</p>
-        <div class="col-sm-10 m-auto"><img class="img-fluid material-shadow-1" src="img/Artboard 1.png" alt=""></div>
+        <p class="medium">To tailor the current best practices to the needs of our team, we conducted 15 one-on-one interviews​ with designers, developers, and product managers, and generated over 500 notes. We made an affinity wall of these notes to tell the story of why we need a design system and how we can build a good one. I also asked interviewees about their work flow and made a work flow map from the to highlight the current painpoints in our workflow and places where the design system can help improve. </p>
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <img class="img-fluid" src="img/tele_affinity.png" alt="">
+        </div>
+      </div>
+      <div class="row full-width grey-bg">
+<!--         <p class="medium">I made a workflow map to highlight the current painpoints in our workflow and places where the design system can help improve.</p> -->
+        <div class="col-sm-12 text-center"><img class="img-fluid" src="img/tele_workflow.png" alt=""></div>
       </div>
       <span class="anchor" id="auditing"></span>
       <div class="mt80"> 
         <h4>UI Auditing</h4>
         <p class="medium">To analyze the current UI inconsistencies and start building standard UI componenets, I audited all the UI elements across the new cloud-based web applications with my fellow intern. We put the current UI components into emerging categories that will serve as the taxonomy of the new design system. We also categorized the current inconsistencies into visual design, interaction, functionalities, and code bugs.</p>
-        <div class="col-sm-8 m-auto"><img class="img-fluid border" src="img/tele_ui.png" alt=""></div>
+      <div class="full-width grey-bg">
+        <div class="col-sm-12"><img class="img-fluid" src="img/tele_ui.png" alt=""></div>
+        <p class="caption">Part of the UI auditing in a virtual white-board: Inconsistencies in data table design across products</p>
       </div>  
       <span class="anchor" id="solution"></span>
        <div class="mt80">
@@ -193,24 +211,25 @@
             <h4>Other Highlights</h4>
             <p class="medium strong">Navigation</p>
             <p class="medium">I not only worked on the design system but also thought about different ways of improving the products. One problem I found was that the current top navigation can have three levels of flyouts on hover. It becomes cumbersome and difficult for users to discover. I explored many different navigation options, among which side navigation and mega menu are the two most promising. Side navigation frees more vertical space and indicates user's current location in the complicated hierarchy, but it is harder to implement and may be too different for many users. Mega menu is good for handling three levels of hierarchy, but some tabs do not have that many links to fill a mega menu. </p>
-          <div class="row">
-            <div class="col-sm-6 m-auto"><img class="img-fluid border" src="img/sidenav.png" alt=""></div>
-            <div class="col-sm-6 m-auto"><img class="img-fluid border" src="img/megamenu.png" alt=""></div>
-          </div>
-          <div class="row">
-              <div class="col-sm-8 m-auto"><img class="img-fluid border" src="img/tele_sidenav.gif" alt=""></div>
-              <div class="m-auto"><p class="margin-top-10">Trying out Adobe XD when prototyping side navigation</p></div>
+          <div class="row full-width grey-bg">
+<!--             <div class="col-sm-4 m-auto"><img class="img-fluid border" src="img/sidenav.png" alt=""></div> -->
+            <div class="col-sm-6 m-auto"><img class="img-fluid border" src="img/tele_sidenav.gif" alt=""></div>
+            <div class="col-sm-6 m-auto"><img class="img-fluid border" src="img/tele_megamenu.png" alt=""></div>
+            <div class="col-sm-12 m-auto"><p class="caption">Side navigation prototype vs mega menu</p></div>
           </div>
           <div class="row">
             <p class="medium strong">Surgeon Timeline</p>
             <p class="medium">Involved in the mobile initiative, I brainstormed different ways of showing a surgeon's timeline. The start time of the procedures is usually scheduled beforehand, but the end time is unknown. The problem can be solved by either providing an estimation of the end time or showing the appointments with a gradient block in the schedule.</p>
+          <div class="row full-width-sm">
             <div class="col-sm-4 m-auto"><img class="img-fluid" src="img/surgeon1-1.png" alt=""></div>
             <div class="col-sm-4 m-auto"><img class="img-fluid" src="img/surgeon2-1.png" alt=""></div>
             <div class="col-sm-4 m-auto"><img class="img-fluid" src="img/surgeon3-1.png" alt=""></div>
-            </div>
+          </div>
+          </div>
         </div>  
     </div>
   </div>
+</div>
 </div>
 
 <!-- More projects -->
@@ -266,6 +285,7 @@
       </a>
      </div>
   </div>
+</div>
 </div>
 
   
