@@ -121,9 +121,9 @@
     <div class="col-lg-8 m-auto"><img class="img-fluid" src="img/hyecho_opening.png" alt=""></div>
   <nav class="col-sm-12 pl40 sticky front1 bg-white" id="myScrollspy">
     <ul class="nav nav-pills col-lg-8 m-auto">
-      <li class="nav-item"><a class="nav-link" href="#challenge">Design Process</a></li>
+      <li class="nav-item"><a class="nav-link" href="#challenge">My Process</a></li>
       <li class="nav-item"><a class="nav-link" href="#empathize">Empathize and Define</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ideation">Ideation and Change</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ideation">Ideation and Prototyping</a></li>
       <li class="nav-item"><a class="nav-link" href="#testing">Usability Testing</a></li>
       <li class="nav-item"><a class="nav-link" href="#ipad">Making of the iPad App</a></li>
       <li class="nav-item"><a class="nav-link" href="#icon">Icon and Illustrations</a></li>
@@ -132,78 +132,131 @@
     <div class="col-sm-12 mt20 position-relative">
       <span class="anchor" id="challenge"></span>
       <div class="mt80">
-            <h4>Design Process</h4>
-            <p class="medium">Our sponsors asked for a mobile app about Hyecho (a young Korea monk in the 2nd century, which is also the protagonist in their newly published book) that can enhance the visiting experience in an upcoming Buddhist art exhibition, increase young people’s interest in Buddhist art, and have educational value beyond and after the exhibit. We helped them prioritize their goals through user research. Half way through the project, we found out that the museum is developing similar products and that museum curators are also stakeholders in this project. We needed to switch gear for the mobile app and deliver an ipad app in a short time. I have been challenged to adapt to the tension between what stakeholders want and what users need, between our assumptions and the changing project requirements.</p>
+            <h4>My Process</h4>
+            <p class="medium">During the 10 months from the beginning to the launch of two applications, I led the effort of user research and ideation, created storyboards, prototypes, and app flows to communicate design ideas with team and stakeholders, delivered high-fidelity design, and conducted usability tests. We iterated on the design constantly to find the best solution under changing stakeholder requirements, diverse user needs, and multiple content layers.</p>
             <div class="row full-width-sm">
               <div class="col-sm-12">
-                <img class="img-fluid material-shadow-1" src="img/process.png" alt="">
+                <img class="img-fluid border" src="img/process.png" alt="">
               </div>
         </div>
        <span class="anchor" id="empathize"></span>
       <div class="mt80">
-            <h4>Empathize and Define</h4>
-            <p class="medium strong">Research Insights</p>
-            <p class="medium">To understand user needs and current design patterns in the museum app space, we conducted comparative analysis and user research.</p>
-            <ol class="counter">
+           <p class="subtitle">Step 0 Prioritizing Stakeholder Goals</p>
+            <h4>What are we designing for?</h4>
+            <p class="medium">Our sponsors asked for a mobile app about Hyecho (a young Korea monk in the 2nd century, which is also the protagonist in their newly published book) that can enhance the visiting experience of an upcoming Buddhist art exhibition, increase young people’s interest in Buddhist art, and have educational value beyond and after the exhibit. These were three distinct goals that would yield different outcomes. Since the app is directly related to the exhibition and we do not have any marketing resources, museum visitors are the people who are most likely to access the product and benefit from it. We helped our stakeholders prioritize their goals and focused the product on enhancing the visiting experience of the exhibition. </p>
+<!--             <img class="img-fluid" src="img/hyecho_vpc1.png"> -->
+<!--             <p class="caption">We finished the first step of defining our value proposition</p> -->
+        </div>
+      <div class="mt80">    
+        <p class="subtitle">Step 1 User Research and Value Proposition</p>
+        <h4>Aligning user needs with features</h4>
+        <p class="medium">To understand museum visitors and their views on an exhibition companion app, we conducted 21 user interviews with and requested a visitor study report from the museum. The visitor study contains over 1500 entrance-exit surveys, an observation study, and an interview study with over 70 interviews. We used this information to answer questions that are crucial to our product definition.</p>
+        <p class="medium strong">What do users want from an exhibition companion app?</p>
+        <p class="medium">In the user interviews, We asked people "what would make you want to download a companion app for a museum exhibit". Combining interview insights to museum visitor studies, we found out about the things that will users want from a companion app:</p>
+        <ol class="counter">
+            <li>
+              <p class="medium">Information offered nowhere else in the exhibition</p>
+              <p>"[I would download the app] if it convinced me that it would improve my experience and if the app contained information not available through the exhibit itself."</p>
+            </li>
+            <li>
+              <p class="medium">Historical context and engaging narrative for the exhibition</p>
+              <p>"Among possible new features, more visitors were interested in people stories." – Freer Gallery of Art 2015 Visitor Studies</p>
+            </li>
+            <li>
+              <p class="medium">Easy to use</p>
+              <p>"Easy to use", "Decent user interface"</p>
+            </li>
+            <li>
+              <p class="medium">Entertainment</p>
+              <p>"Games I could play so that I could be entertained", "Entertaining"</p>
+            </li>
+          </ol>
+<!--         <p class="medium">[vpc2]</p> -->
+        <p class="medium strong">What are the pain points?</p>
+        <p class="medium">Through user research, we also found some major pain points that we need to address:</p>
+          <ol class="counter">
               <li>
-                <p class="medium">Comparative Analysis</p>
-                <p>We looked into the existing apps for museums and exhibitions, and highlighted features that are important and innovative for us, such as <strong>gamification, providing different ways of sorting objects, revealing relationship between objects, and social interaction</strong>.</p>
+                <p class="medium">People think museum apps are not necessary</p>
+                <p>"I never did that. I do not think it is really necessary."</p>
               </li>
               <li>
-                <p class="medium">21 in-person interviews</p>
-                <p>We found two pain points that need to be addressed: <br>Most people do not see a companion app for an exhibit necessary <br>Most people associate Buddhism and art exhibit with being boring</p>
-              </li>
-              <li>
-                <p class="medium">32 Survey Responses</p>
-                <p>93% of the respondents find audio guide helpful in perceiving new information<br>75% percent of them have used audio guide</p>
+                <p class="medium">Buddhist art and the Smithsonian Museums are perceived as “boring” by many people</p>
+                <p>"Colorful, boring, old" – Three words an interviewee used to describe Buddhist art.</p>
               </li>
             </ol>
-<!--             <p class="medium">We looked into the existing apps for museums and exhibitions, and highlighted features including gamification, different ways of sorting objects, showing relationship between objects, and social interaction.</p>
-            <p class="medium strong">User Interviews</p>
-            <p class="medium">We conducted 21 in-person user interviews and used the value proposition canvas to align user needs to our product direction. We found two pain points that need to be addressed: <strong>1) many people do not see a companion app for an exhibit necessary; 2) many people associate Buddhism and art exhibit with being boring</strong>.</p>
-            <p class="medium strong">Survey</p>
-            <p class="medium">To relieve the first pain point found in the interviews, we referred to users’ need of extra information and decided to add audio guide to the app. We conducted a survey on audio guide and received 32 responses. We found that <strong>93% of the respondents find audio guide helpful in perceiving new information, and 75% percent of them have used audio guide</strong> in a museum.</p> -->
-            <p class="medium strong">Personas</p>
-            <p class="medium">We requested a visitor study report from the museum, which contains over 1500 entrance-exit surveys, an observation study, and an interview study with over 70 interviews. We got robust information on the demographics and behaviors of the visitors, which helped us create our personas.</p>
-            <div class="row full-width grey-bg">
-              <div class="col-sm-4 m-auto"><a href="img/h_persona1.png"><img class="img-fluid" src="img/h_persona1.png" alt=""></a></div>
-              <div class="col-sm-4 m-auto"><a href="img/h_persona2.png"><img class="img-fluid" src="img/h_persona2.png" alt=""></a></div>
-              <div class="col-sm-4 m-auto"><a href="img/h_persona3.png"><img class="img-fluid" src="img/h_persona3.png" alt=""></a></div>
-            </div>
-            <p class="medium">This wide range of audience presented big challenge for prioritizing features. Since our stakeholders care most about attracting young students to this field and topic, we picked our main persona and dived deeper into her journey to define the major flow of the application. </p>
-            <div class="full-width grey-bg"><a href="img/hyecho_experiencemap.png"><img class="img-fluid" src="img/hyecho_experiencemap.png" alt=""></a>
-              <p class="caption">I made an experience map illustrating the visiting experience and pain points of our main persona</p>
-            </div>
+        <p class="medium">Some interviewees mentioned that they want an audio narration guide from the app. This inspired us to consider audio guide as a way to make the "unnecessary" museum app "necessary". Audio guide in museums usually charges a fee, but the wireless network in the museum and our app are free. To validate this solution, we sent out a survey on audio guide consumption and found that 93% of the respondents find audio guide helpful in perceiving new information, and that 75% percent of them have used audio guide.</p>
+        <p class="medium">We aligned our value proposition to our findings from user research and defined out product on a high level.<br>
+<!--         [VPC 3] -->
+        </p>
+        <p class="medium strong">What content should the app have?</p>
+        <p class="medium">Our app is going to be content-centric, but our stakeholders want us to come up with the types of content we want and develop it afterwards. To deal with this challenge, we dived deeper into user needs. </p>
+        <p class="medium">The museum visitor study contains detailed information of the visitors including demographics. We created personas based on the data to guide our design decisions. We got the feedback from people at the museum that the personas reflect their audience very well. </p>
+        <div class="row full-width grey-bg">
+            <div class="col-sm-4 m-auto"><a href="img/h_persona1.png"><img class="img-fluid" src="img/h_persona1.png" alt=""></a></div>
+            <div class="col-sm-4 m-auto"><a href="img/h_persona2.png"><img class="img-fluid" src="img/h_persona2.png" alt=""></a></div>
+            <div class="col-sm-4 m-auto"><a href="img/h_persona3.png"><img class="img-fluid" src="img/h_persona3.png" alt=""></a></div>
+        </div>
+        <p class="medium">The museum study stated that "The Freer audience is relatively young, predominantly female, and one-half regional；Three in five are very interested in Asian art/history/culture; half are very interested in Middle Eastern art/history/culture." Therefore we picked Ashley as our main persona and I made a journey map to illustrate her museum visiting experience and highlight the pain points she has.</p>
+        <div class="full-width grey-bg"><a href="img/hyecho_experiencemap.png"><img class="img-fluid" src="img/hyecho_experiencemap.png" alt=""></a></div>
+        <p class="medium">Combining the pain points in the user journey and former research findings, we decided that our app will provide <strong>narratives that connects the artworks to the pilgrimage of Hyecho, in-depth information about the artworks, and gamified, engaging content for younger audience or those who are less interested in the exhibition itself.</strong></p>
         </div>
       <span class="anchor" id="ideation"></span>
       <div class="mt80">    
-        <h4>Ideation and Change</h4>
-          <p class="medium strong">Initial Ideation</p>
-          <p class="medium">The first challenge was to help sponsors prioritize their goals. Since we are making a museum companion app first and foremost, we persuaded sponsors to prioritize enhancing the visiting experience and strive for educational value instead of trying to market Buddhist art with the app. With the journey map, we identified the two major pain points we need to address in our design: 1) No engaging story is provided to contextualize the exhibit for users; 2) No in-depth information about the artworks is provided by the museum in any form. These two pain points corresponds with two types of visitor behaviors we found from existing literature: people either follow a structured tour or freely choose what to look at.</p>
-          <p class="medium">Therefore, our app provides two options upon opening: 1) following a structured journey that ties the objects to Hyecho's journey; 2) browsing and searching for objects in an object inventory. To engage visitors, especially younger visitors who are like our persona David, we design fun interactions that tells interesting facts about the artworks. We also designed leveled audio guides that allow users to choose the type of content they want to hear.</p>
-          <p class="medium">One big difficulty was to connect the exhibition objects to Hyecho, because they are different kinds of Buddhist artworks from different time periods and are not necessarily related to Hyecho. We finally managed to group 21 objects by their geographical locations and map to the areas Hyecho went to in the 2nd century.</p>
-          <div class="row">
-              <div class="col-sm-6 mt20 mb0"><a href="img/hyecho_storyboard.png"><img class="img-fluid material-shadow-1" src="img/hyecho_storyboard.png" alt=""></a></div>
+         <p class="subtitle">Step 2 Ideation and prototyping</p>
+        <h4>Solving design challenges</h4>
+        <p class="medium strong">How to integrate different kinds of content?</p>
+        <p class="medium">Based on user research, we decided that the app would mainly provide three types of content:</p>
+        <ul class="medium">
+          <li>The story of Hyecho in relation to the artworks</li>
+          <li>Information on the artworks</li>
+          <li>Gamified content</li>
+        </ul>
+        <p class="medium">The first challenge we faced was how to integrate these very different content in one product in a natural way. I started by brainstorming with sketches, storyboards, and low-fidelity prototypes. I explored several options including whole app as a game (user prefer app to a full-on game), a cartoon Hyecho as a narrator (not sophisticated enough for the subject matter), grouping objects by geographical location and collecting objects with a journal (requirements changed, this idea no longer worked when we learned that only 8 of the artworks should be in our app).
+</p>
+         <div class="row">
+            <div class="col-sm-6 mt20 mb0"><a href="img/hyecho_storyboard.png"><img class="img-fluid material-shadow-1" src="img/hyecho_storyboard.png" alt=""></a></div>
 <!--               <div class="col-sm-4 mt20 mb0"><a href="img/hyecho_prototype2.gif"><img class="img-fluid" src="img/hyecho_prototype2.gif" alt=""></a></div> -->
-              <div class="col-sm-6 mt20 mb0"><a href="img/hyecho_prototype1.gif"><img class="img-fluid material-shadow-1" src="img/hyecho_prototype1.gif" alt=""></a></div>
-              <div class="col-sm-12 mb0"><p class="caption">I used storyboards and low-fidelity prototypes to communicate initial ideas with stakeholders</p></div>
+            <div class="col-sm-6 mt20 mb0"><a href="img/hyecho_prototype1.gif"><img class="img-fluid material-shadow-1" src="img/hyecho_prototype1.gif" alt=""></a></div>
+            <div class="col-sm-12 mb0"><p class="caption">I used storyboards and low-fidelity prototypes to communicate initial ideas with stakeholders</p></div>
+        </div>
+      <p class="medium">Inspired by the book related to Hyecho written by our sponsors, we came to use the metaphor of a book to connect all the dots. For each artwork in our app (we have 8 in total), there is one "book chapter" related. Page 1 is Hyecho’s Journey in relation to the artwork, page 2 is in-depth information on the artwork, and page 3 is a mini game related to the content for younger audiences. The chapters are organized in the order of a physical route that a visitor might take in the museums, and the logic of the storyline also fits with the story of Hyecho's pilgrimage. The first chapter, for example, is Hyecho's initial departure at sea.
+      </p>
+      <div class="row full-width grey-bg">
+          <div class="col-md-2 mb0"><img class="img-fluid" src="img/hyecho_book1.PNG"></div>
+          <div class="col-md-2 mb0"><img class="img-fluid" src="img/hyecho_book2.PNG"></div>
+          <div class="col-md-2 mb0"><img class="img-fluid" src="img/hyecho_book3.PNG"></div>
+          <div class="col-md-2 mb0"><img class="img-fluid" src="img/hyecho_book4.PNG"></div>
+          <div class="col-md-2 mb0"><img class="img-fluid" src="img/hyecho_book6.jpeg"></div>
+          <div class="col-md-2 mb0"><img class="img-fluid" src="img/hyecho_book5.PNG"></div>
+          <div class="col-sm-12"><p class="caption">Left to right: table of content, transition screen, story page, artwork information page 1, artwork information page 2, game page</p></div>
           </div>
-
-          <div class="row full-width grey-bg">
-              <div class="col-sm-12 mb0"><a href="img/hyecho_flowchart.png"><img class="img-fluid" src="img/hyecho_flowchart.png"></a>
-                  <p class="caption">I put together app flow version 1 with the help of Rebecca and Sindhu</p>
-             </div>
-          </div>
-          <p class="medium strong">"Plot Twist"</p>
-          <p class="medium">At the end of April, we had our first meeting with people from the museum. To our surprise, instead of having 21 objects, there are actually only 8 objects in the Hyecho related exhibition, which meant that our object-centered design and object groupings do not work anymore. The museum is also developing a series of "podcasts" that will serve as 20 minute audio guides. Our initial idea about the phone app overlaps too much with what they were developing. The museum also wants to put tethered iPads beneath Hyecho's statue and wants us to develop a tablet app for the devices, which is a brand new requirement. We did not know that the team at the museum are also important stakeholders until midway through the project.</p>
-          <p class="medium">After taking some deep breaths, we came together and started brainstorming alternative directions for our phone app and how the two apps can compliment each other. After going through the new object selection, the content of the book written about Hyecho, and rounds of sketches, we decided to make our phone app a narrative about Hyecho's pilgrimage, divided into 8 chapters, and weave the objects into it, instead of being centred around objects. Our tablet app will be an interactive map that introduces the important locations related to Buddha's life that Hyecho went to, which will provide simple, informative experience on the tethered apps. </p>
-          <div class="row full-width-sm">
-            <div class="col-sm-12">
-              <img class="img-fluid material-shadow-1" src="img/hyecho_FSworkflow.png" alt="">
-              <a href="img/hyecho_workflow.png"><img class="material-shadow-1 img-fluid" src="img/hyecho_workflow.png"></a>
-              <p class="caption">The new app flow keeps the two options, one for a linear experience and the other for free exploration</p>
-            </div>
-          </div>
+      <p class="medium strong">How to guide visitors through the physical space?</p>
+      <p class="medium">The design of a linear book structure also provides a way of guiding visitors through the physical space. The exhibition site consists of two galleries, the Freer and the Sackler, and the building structure is rather complicated. The museum does not provide any kind of map or guidance, and our stakeholders hoped that our app can help reduce the confusion caused by the building structure. We worked with museum curators and found the most optimized way to arrange the chapters so that users can follow the app to walk through the exhibition from one end to the other. Users can click on the map icon in each chapter to open a map with directions. The app will return to portrait orientation when users close the map.</p>
+      <div class="row full-width-sm">
+        <div class="col-md-8 m-auto"><img class="img-fluid" src="img/hyecho_map.PNG"></div>
+      </div>
+      <p class="medium strong">How to accommodate different museum visiting behaviors?</p>
+      <p class="medium">When we did research on existing literature in technology and museums and interviewed people, we found that there are two distinct museum visiting patterns: following a structured tour or freely choose what to look at. Our app aims to provide a meaningful narrative to connect the artworks and provide a route for visiting, but we also need to support those who want to freely roam around. Therefore we provided two options for users in the app. They can either choose to follow the linear journey or visit any chapter.</p>
+      <div class="col-md-6 m-auto"><img class="img-fluid" src="img/hyecho_twooption.PNG"></div>
+      <p class="caption">Users see two options when they open the app</p>
+      <p class="medium strong mt80">How to optimize audio guides?</p>
+      <p class="medium">In our survey about audio guides, besides the usefulness of it, we also found some pain points that people are having with audio guides. One user told us that "I want the option to skip ahead if I'm less interested in a particular work, or go deeper if I'm more interested in one...It's no fun to have to stand for too long just to hear the audio". Traditional audio guides are too long and not flexible enough for visitor's diverse interest.</p>
+      <p class="medium">In the spirit of making the content short and easy to consume, we broke the content down into smaller sections and designed leveled audio guides. Each section has a title so people can choose the content that interests them. </p>
+      <div class="row full-width-sm text-center"> 
+        <div class="row col-md-8 m-auto">
+          <div class="col-md-6"><img class="img-fluid" src="img/hyecho_audio1.PNG"></div>
+          <div class="col-md-6"><img class="img-fluid" src="img/hyecho_audio2.PNG"></div>
+          <div class="col-md-12"><p class="caption">Text and audio are broken down into expandable sections with titles</p></div>
+        </div>
+      </div>
+      <p class="medium strong">Adapting to changing project requirements</p>
+      <p class="medium">During the ideation phase, drastic changes in stakeholder requirements nearly rendered our first version of the app flow useless. Initially, we were told there are 23 objects we need to put in the app, and that the museum does not provide any other information or service to visitors besides the most basic labels on the wall. Therefore our first idea was centered around audio guide. We grouped objects by geographical locations to provide context and connections between objects. Users can either visit each location on a map or view a catalog of all the objects.</p>       
+        <div class="row full-width grey-bg">
+            <div class="col-sm-12 mb0"><a href="img/hyecho_flowchart.png"><img class="img-fluid" src="img/hyecho_flowchart.png"></a>
+                <p class="caption">I put together app flow version 1 with the help of Rebecca and Sindhu</p>
+           </div>
+        </div>
+        <p class="medium">However, when it was nearly three months into the project, we learned that there are only 8 objects we should put in our app, and that the museum is already making another mobile app that is mainly an audio guide. We also learned that we need to make another tablet app to install on the tethered tablets in the museum exhibition. This means that our old structure cannot be applied, and we only have around one week to come up with a new solution. After extensive brainstorming with the whole team, we decided to focus our mobile app more on a unique narrative and guidance through the physical space instead of artwork catalog and audio guide. To complement the content of the mobile app, the tablet app was designed to be a geographical map of Hyecho's journey and detailed introduction of each location he visited.</p>
       </div>
       <span class="anchor" id="testing"></span>
       <div class="mt80"> 
