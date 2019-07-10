@@ -17,7 +17,7 @@
 <h1>Ecosystem Individual Players</h1>
 <p>This graph contains individual players in the college admissions ecosystem. The size of the bubbles represent the number of high school students the individual can reach. </p>
 <p>*Admissions influence is calculated by multiplying the individual's influence as perceived by students (scale of 0-5), the frequency of contact with students (days per month), and relevance to admissions (scale of 0-5).</p>
-<p><span id="green">Green</span> = short lifecycle; <span id="orange">Orange</span> = long lifecycle</p>
+<p><span id="orange">Orange</span> = multiple consecutive cycles; <span id="violet">Violet</span> = few sporadic cycles; <span id="pink">Pink</span> = one cycle; </p>
 <div id="my_dataviz"></div>
 
 <!-- A bit of CSS: change stroke color of circle on hover (white -> black) -->
@@ -58,8 +58,12 @@ p {
   padding-bottom: 24px;
 }
 
-#green {
-  color: rgb(102, 194, 165);
+#pink {
+  color: rgb(231, 138, 195);
+}
+
+#violet {
+  color: rgb(141, 160, 203);
 }
 
 #orange {
@@ -85,7 +89,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("Ecosystem Players - People_min.csv", function(data) {
+d3.csv("Ecosystem Players - People_min2.csv", function(data) {
 
   // Add X axis
   var x = d3.scaleLog()
@@ -122,12 +126,12 @@ d3.csv("Ecosystem Players - People_min.csv", function(data) {
 
   // Add a scale for bubble size
   var z = d3.scaleLinear()
-    .domain([5,2000])
-    .range([8, 30]);
+    .domain([1, 4])
+    .range([8, 35]);
 
   // Add a scale for bubble color
   var myColor = d3.scaleOrdinal()
-    .domain([0, 1])
+    .domain([0, 3])
     .range(d3.schemeSet2);
         
   // -1- Create a tooltip div that is hidden by default:
