@@ -1,0 +1,18 @@
+Player,Scale_m,Reach,Lifecycle,Admissions_influence
+Parents/Guardians,34.4,1,2,100
+Mentors,16.7,1,2,18
+General Guidance Counselors,0.14,3,3,120
+Teachers,1.1,3,3,192
+Principals,0.065,4,3,8
+Superintendents/School board,0.009,4,3,16
+High School Atheletic Coaches,0.024,2,3,36
+College Counselors (IECs),0.0075,2,3,80
+Academic/Test Prep Tutors,0.035,2,3,36
+College Admissions Officers,0.021,4,3,60
+College Admissions Deans,0.003,4,3,80
+College Athletic Coaches,0.043,2,3,12
+College Students,16,1,1,4
+College Alumni,73.8,1,1,3
+Professors/instructors,0.38,1,3,2
+Financial Aid Officers,0.03,4,3,80
+Title IX coordinators,0.03,4,3,40
