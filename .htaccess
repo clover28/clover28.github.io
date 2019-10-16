@@ -1,4 +1,4 @@
-AuthName "Section name"
-AuthType Basic
-AuthUserFile /.htpasswd
-Require valid-user
+AuthType Basic  
+AuthName "restricted area"  
+AuthUserFile /.htpasswd  
+require valid-user
