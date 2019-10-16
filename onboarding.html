@@ -111,21 +111,21 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-8 m-auto"><img class="img-fluid" src="img/hyecho_opening.png" alt=""></div>
+<    <!-- <div class="col-lg-8 m-auto"><img class="img-fluid" src="img/hyecho_opening.png" alt=""></div>> -->
   <nav class="col-sm-12 pl40 sticky front1 bg-white" id="myScrollspy">
     <ul class="nav nav-pills col-lg-8 m-auto">
-      <li class="nav-item"><a class="nav-link" href="#challenge">Background</a></li>
-      <li class="nav-item"><a class="nav-link" href="#empathize">The Problem</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ideation">Diagnosing</a></li>
-      <li class="nav-item"><a class="nav-link" href="#testing">Success Metrics</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ipad">Solution Exploration</a></li>
-      <li class="nav-item"><a class="nav-link" href="#icon">Visual Design</a></li>
-      <li class="nav-item"><a class="nav-link" href="#icon">Tracking Data</a></li>
-      <li class="nav-item"><a class="nav-link" href="#icon">Reflection</a></li>
+      <li class="nav-item"><a class="nav-link" href="#background">Background</a></li>
+      <li class="nav-item"><a class="nav-link" href="#problem">The Problem</a></li>
+      <li class="nav-item"><a class="nav-link" href="#diagonosing">Diagnosing</a></li>
+      <li class="nav-item"><a class="nav-link" href="#metrics">Success Metrics</a></li>
+      <li class="nav-item"><a class="nav-link" href="#solution">Solution Exploration</a></li>
+      <li class="nav-item"><a class="nav-link" href="#visual">Visual Design</a></li>
+      <li class="nav-item"><a class="nav-link" href="#data">Tracking Data</a></li>
+      <li class="nav-item"><a class="nav-link" href="#reflection">Reflection</a></li>
     </ul>
 </nav>
     <div class="col-sm-12 mt20 position-relative">
-      <span class="anchor" id="challenge"></span>
+      <span class="anchor" id="background"></span>
       <div class="mt80">
         <p class="subtitle">Background</p>
         <h4>The service and the current onboarding</h4>
@@ -137,7 +137,7 @@
                 <img class="img-fluid border" src="img/process.png" alt="">
               </div>
         </div> -->
-       <span class="anchor" id="empathize"></span>
+       <span class="anchor" id="problem"></span>
       <div class="mt80">
            <p class="subtitle">The Problem</p>
             <h4>Clients waited too long</h4>
@@ -146,6 +146,7 @@
 <!--             <img class="img-fluid" src="img/hyecho_vpc1.png"> -->
 <!--             <p class="caption">We finished the first step of defining our value proposition</p> -->
         </div>
+      <span class="anchor" id="diagonosing"></span>
       <div class="mt80">    
         <p class="subtitle">Diagonosing the Current Situation</p>
         <h4>Interviewing the operations team</h4>
@@ -176,7 +177,7 @@
           </ol>
 <!--         <p class="medium">[vpc2]</p> -->
         </div>
-      <span class="anchor" id="ideation"></span>
+      <span class="anchor" id="metrics"></span>
       <div class="mt80">    
          <!-- <p class="subtitle">Success Metrics</p> -->
         <h4>Success Metrics</h4>
@@ -184,43 +185,73 @@
         <p class="medium">Because time to first value is so important for the business, we set our success metrics as “95% of users can schedule first session within 48 hours of payment”. </p>
       </div>
 
-      <span class="anchor" id="testing"></span>
+      <span class="anchor" id="solution"></span>
       <div class="mt80"> 
         <h4>Solution Exploration</h4>
-        <p class="medium">We conducted one round of in-person usability testing in the summer and it helped us resolve our mobile app navigation. In the initial design, we used the commonly adopted bottom navigation bar and top status bar with a back button. In our new design, we have eight chapters and each chapter contains an introduction page, an object page, and an interaction page. There is increased need to go back and forward between these pages. iPhones are also getting bigger and I started to see iOS apps put important functionalities at the bottom closer to the thumb. We decided to put back and forward buttons at the bottom and use the infamous hamburger menu to contain pages that will not be frequently used. </p>
-        <p class="medium">We asked users to compare the two navigation models with prototypes and found that the bottom back and forth button with hamburger menu is preferred. In our latest testing with the launched app, over 85% of users do not have any difficulties navigating the app.</p>
-        <p class="medium">Before launching the app, we conducted 9 structured usability tests and guerrilla usability tests. We modified the app based on user feedback and summarized spaces for improvement for our clients.</p>
-        <div class="row full-width-sm">
-              <div class="col-sm-4 mb0"><p class="caption">Test Option 1</p><img class="img-fluid" src="img/hyecho_test1.png" alt=""></div>
-              <div class="col-sm-4 mb0"><p class="caption">Test Option 2</p><img class="img-fluid" src="img/hyecho_test2.png" alt=""></div>
-              <div class="col-sm-4 mb0"><p class="caption">Final Design</p><img class="img-fluid" src="img/hyecho_test3.png" alt=""></div>
+        <p class="medium">This is an iterative process with the operations team, who is both an important stakeholder and also one of the end users, and the engineering team who delivers the final product.  </p>
+        <p class="strong medium">Make it simple and scalable</p>
+        <p class="medium">Since the sales operations integration problem is technical, I focused on the other two areas of problem on the design side. Now that our goal of shortening students’ time to first value is clear, and the underlying problems (excessive operational complexity caused by scattered data; lack of communication, instructions, and visibility for the clients) are identified, I defined several design goals to guide my ideation process:
+        </p>
+        <ol>
+          <li>Scattered data needs to be centralized</li>
+          <li>The process should be as automated as possible so that the operational cost can be lowered and the efficiency can be increased</li>  
+          <li>should be informed and guided throughout the process</li> 
+          <li>should have a sense of agency and feel confident starting the program</li> 
+        </ol>
+        <p class="medium">To solve for the (1), I collaborated with the operations team and got a prioritized list of data points that are needed for pairing. Because the client and the advisor need to meet on a regular cadence through several months, availability and time zone are the most important hard requirements. After that, students and their parents are most likely to have specific gender requirements. Lastly, students may have specific requirements for advisors, but our staffing resources are limited and can’t account for all special requirements. Therefore we need to convey to students that our advisors went through the same training and are equally qualified to deliver the service.</p>
+        <p class="medium">To solve for (2)(3)(4), instead of putting a black box in front of clients, I decided to let them take charge and select their own advisors. With the availability and timezone data collected in (1), not only can students be automatically matched with advisors who have overlapping availabilities, but they can also go ahead and select a time slot from the advisor’s availability for their first meeting right after pairing themselves with an advisor. </p>
+      <p class="strong medium">Designing a system that ties together three distinct user groups</p>
+      <p class="medium">Because the business is a unique combination of service and software, the web-based software system has three distinct groups of users – students (clients), advisors, and the operations team that manages the interaction between students and advisors. 
+        For clients, they need a simple yet effective way to understand what they need to do and who they can choose to pair with. For advisors, they have a way to enter availabilities but other data is missing and there’s no reminding mechanisms. For operations, they need visibility into clients’ onboarding progress and make sure advisors enter the required data. 
+        To make sure the design accounts for the whole system and the three user groups working together, I got inspiration from service blueprints and mapped the whole system with client experience on the top level, and the underlying operations below.
+        </p>
+       <div class="row full-width-sm">
+              <div class="col-sm-12">
+                <img class="img-fluid border" src="img/onboarding_workflow.png" alt="">
+              </div>
+        </div>  
+      <p class="strong medium">Making trade-offs</p>
+      <p class="medium">As soon as I got this first draft of the workflow done, I started showing it to the engineering leads for the project. I quickly found out that given the current resources and business needs, it was not realistic to add additional data points in the system. We need to work with what’s already there, availability and timezone, and make the experience work around it. For example, instead of having advisors’ majors and other background information as individual data points that can be used for matching, we decided to utilize the existing biography field and standardize the advisor biographies so that they reflect similar information. For special requests and less common use cases such as upgrading to more programs, the operations team will be notified and will continue handling them manually.</p>
+      <p class="medium">In collaboration with engineering, we went through several iterations of a much more scoped-down and specific flow.</p>
+      <!-- <div class="row full-width-sm">
+        <div class="col-sm-12">
+          <img class="img-fluid border" src="img/onboarding_MVP.png" alt="">
         </div>
+  </div>   -->
       </div>
 
-      <span class="anchor" id="ipad"></span>  
+      <span class="anchor" id="visual"></span>  
       <div class="mt80">    
-        <h4>Solution Exploration </h4>
-        <p class="medium">It was summer break after the big change in stakeholder requirements and app flow. I did an <a href="tele.html" target="_blank">internship at Teletracking</a> and designed the ipad app during my time after work. After deciding on the structure with stakeholders, I iterated on the visual design of the app and picked a Buddhist art inspired colorful palette to make it more eye-catching and fun.</p>
-        <div class="row full-width-sm grey-bg">
-          <div class="col-sm-12">
-           <!--  <img class="img-fluid" src="img/hyecho_ipad1.png" alt="">
-            <p class="caption">Early concepts including a comic book inspired layout</p>
-            <a href="img/hyecho_ipad2.png"><img class="img-fluid" src="img/hyecho_ipad2.png" alt=""></a>
-            <p class="caption">Version 1: Using the same colors as the mobile app, but feels too serious</p> -->
-            <img class="img-fluid border margin-top-40" src="img/hyecho_ipadstyle.png" alt="">
-<!--             <p class="caption">New color palette inspired by the rich colors of Buddhist art</p></div> -->
-          </div>
-      </div>
-      <span class="anchor" id="icon"></span> 
-      <div class="mt80">    
-        <h4>Icon and Illustrations</h4>
-        <p class="medium">I designed the icon for our apps and made illustrations to enhance the immersiveness of our interactions.</p>
+        <h4>Visual Design and User Testing</h4>
+        <p class="medium">When making the visual design, I utilized our existing UI components and interaction patterns as much as possible and went through a few iterations with internal feedback from stakeholders and advisors first. Then I tested a click-through prototype with student users to make sure any usability issues are addressed prior to implementation. I also designed the full email notification flow for the system.</p>
+        <p class="medium">To ensure successful delivery, I collaborated closely with engineering throughout the implementation process to clarify any ambiguities and conduct QA on Github pull requests.</p>
         <div class="row full-width-sm">
-        <div class="col-sm-12">
-          <img class="img-fluid" src="img/hyecho_illo.png" alt="">
+          <div class="col-sm-12">
+            <img class="img-fluid border" src="img/onboarding_visual.png" alt="">
+          </div>
+          </div>  
+        <div class="row">
+        <div class="col-sm-12 m-auto">
+          <img class="img-fluid border mx-auto" src="img/onboarding_prototype.gif" alt="">
         </div>
+        </div>  
       </div>
+
+      <span class="anchor" id="data"></span> 
+      <div class="mt80">    
+        <h4>Tracking user behavior post-launch</h4>
+        <p class="medium">One thing I learned over past projects is that it is important to track data post-launch so that the team can 1) learn and iterate and 2) measure the effect of the release. As the designer, I was particularly interested in learning whether the user behaviors were as expected and time to first value for those users who go through the new onboarding process. To measure user behavior, I set up and analyzed screen recording and heat maps in Hotjar. Through monitoring user behavior, I identified improvements to be made in the future including more information in bios and improvements on mobile.  </p>
+        <p class="medium">In the end, the business decided to only roll it out to the smallest program we had (less than 10% of total clients), so we didn’t reach the ambitious metrics of “95% of users can schedule first session within 48 hours of payment”. But within the program we piloted in, we reached this goal.</p>
     </div>
+
+    <span class="anchor" id="reflection"></span> 
+    <div class="mt80">    
+      <h4>Reflection and learnings</h4>
+      <p class="medium">In the end, I was satisfied with how the feature turned out and how users interacted with it, but looking back it was particularly obvious that I should have involved engineering in the discovery and solution exploration process      </p>
+      <p class="medium">I started showing design proposals to engineering as soon as I finished discovery and made the first draft, but that felt surprising to engineers, since they were involved in neither the discovery process nor the solution brainstorming. Over time, I have learned from both practice and from the book Inspired that the more contexts engineers have, the more efficient development will be, as engineers are excellent problem solvers and the most familiar with the cost in building. It’s never too early to bring engineers in.
+      </p>
+  </div>
+    
     </div>
   </div>
 </div>
@@ -252,7 +283,7 @@
       </div>  
        </a> 
       </div>
-    <div class="col-sm-3">  
+    <!-- <div class="col-sm-3">  
     <a href="beauty.html">   
       <div class="row border-left">
         <div class="col-sm-4">
@@ -263,8 +294,8 @@
         </div>
        </div> 
       </a>
-      </div>
-    <div class="col-sm-3">  
+      </div> -->
+    <!-- <div class="col-sm-3">  
       <a href="musi.html">
        <div class="row border-left">
         <div class="col-sm-4">
@@ -275,7 +306,7 @@
         </div>
        </div>
       </a>
-     </div>
+     </div> -->
   </div>
 </div>
 
