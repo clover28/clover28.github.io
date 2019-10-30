@@ -89,13 +89,13 @@
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
            <p class="strong">Overview</p>
-            <p>In this project, we developed an efficient, scalable way for clients to onboard into our service that's delivered through a combination of human service and software. I was responsible for the end-to-end design process from discovery to launch.</p>
+            <p>In this project, we developed an efficient, scalable way for clients to onboard into our service that's delivered through a combination of human service and software. I designed a new feature for a web application.</p>
           </div>
           <div class="col-lg-2 mr-auto">
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
             <p class="strong">My Role</p>
-            <p>Product Designer</p>
+            <p>Product Designer, responsible for the end-to-end design process from discovery to launch.</p>
           </div>
           <div class="col-lg-2 mr-auto">
             <hr class="section-heading-spacer">
@@ -129,9 +129,8 @@
       <div class="mt80">
         <p class="subtitle">Background</p>
         <h4>The service and the current onboarding</h4>
-            <p class="medium">CV1.0 was a software enabled service company running college application guidance programs for high school students. The service is a structured curriculum administered by a human advisor, and the software is used for generating students’ application plans based on data and proprietary algorithms. 
-              In order to start the program, the student needs to sign up for the web-based software platform, enter some information, and get paired with a human advisor. We call this process before the first meeting between the student and advisor onboarding.
-              .</p>
+            <p class="medium">CV1.0 was a software enabled service company running college application guidance programs for <strong>high school students</strong>. The service is a structured curriculum administered by <strong>a human advisor</strong>, and the software is used for generating students’ application plans based on data and proprietary algorithms. 
+              In order to start the program, the student needs to sign up for the web-based software platform, enter some information, and get paired with a human advisor by <strong>the operations team</strong>. We call this process before the first meeting between the student and advisor onboarding.</p>
             <!-- <div class="row full-width-sm">
               <div class="col-sm-12">
                 <img class="img-fluid border" src="img/process.png" alt="">
@@ -190,13 +189,24 @@
         <h4>Solution Exploration</h4>
         <p class="medium">This is an iterative process with the operations team, who is both an important stakeholder and also one of the end users, and the engineering team who delivers the final product.  </p>
         <p class="strong medium">Make it simple and scalable</p>
-        <p class="medium">Since the sales operations integration problem is technical, I focused on the other two areas of problem on the design side. Now that our goal of shortening students’ time to first value is clear, and the underlying problems (excessive operational complexity caused by scattered data; lack of communication, instructions, and visibility for the clients) are identified, I defined several design goals to guide my ideation process:
-        </p>
-        <ol>
+        <p class="medium">Since the sales operations integration problem is technical, I focused on the other areas of problem on the design side:</p> 
+        <ol class="counter">
+          <li>
+            <p class="medium">Information needed to pair an advisor with a student is scattered across many different tools, making the manual pairing process complicated </p>
+          </li>
+          <li>
+            <p class="medium">After the student and advisor are being paired in the system, there is no automated notifications or instructions for scheduling the first meeting </p>
+          </li>
+          <li>
+            <p class="medium">Clients wait in a black box</p>
+          </li>
+        </ol>
+        <p class="medium">Based on the problem and the goal of solving time to first value, I defined several design goals to guide my ideation process:</p>
+        <ol class="medium">
           <li>Scattered data needs to be centralized</li>
           <li>The process should be as automated as possible so that the operational cost can be lowered and the efficiency can be increased</li>  
-          <li>should be informed and guided throughout the process</li> 
-          <li>should have a sense of agency and feel confident starting the program</li> 
+          <li>Clients should be informed and guided throughout the process</li> 
+          <li>Clients should have a sense of agency and feel confident starting the program</li> 
         </ol>
         <p class="medium">To solve for the (1), I collaborated with the operations team and got a prioritized list of data points that are needed for pairing. Because the client and the advisor need to meet on a regular cadence through several months, availability and time zone are the most important hard requirements. After that, students and their parents are most likely to have specific gender requirements. Lastly, students may have specific requirements for advisors, but our staffing resources are limited and can’t account for all special requirements. Therefore we need to convey to students that our advisors went through the same training and are equally qualified to deliver the service.</p>
         <p class="medium">To solve for (2)(3)(4), instead of putting a black box in front of clients, I decided to let them take charge and select their own advisors. With the availability and timezone data collected in (1), not only can students be automatically matched with advisors who have overlapping availabilities, but they can also go ahead and select a time slot from the advisor’s availability for their first meeting right after pairing themselves with an advisor. </p>
@@ -204,7 +214,7 @@
       <p class="medium">Because the business is a unique combination of service and software, the web-based software system has three distinct groups of users – students (clients), advisors, and the operations team that manages the interaction between students and advisors. 
         For clients, they need a simple yet effective way to understand what they need to do and who they can choose to pair with. For advisors, they have a way to enter availabilities but other data is missing and there’s no reminding mechanisms. For operations, they need visibility into clients’ onboarding progress and make sure advisors enter the required data. 
         To make sure the design accounts for the whole system and the three user groups working together, I got inspiration from service blueprints and mapped the whole system with client experience on the top level, and the underlying operations below.
-        </p>
+      </p>
        <div class="row full-width-sm">
               <div class="col-sm-12">
                 <img class="img-fluid border" src="img/onboarding_workflow.png" alt="">
