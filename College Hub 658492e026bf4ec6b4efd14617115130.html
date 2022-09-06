@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>College Hub</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2102472f-f08c-4ccf-9d09-ec345da82eb1" class="page sans"><header><img class="page-cover-image" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/a8e92958309a05dab7f4aeeefc63c290.png" style="object-position:center 15.800000000000002%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🏫</span></div><h1 class="page-title">College Hub</h1></header><div class="page-body"><h1 id="45456b75-aa22-4ffa-8416-da18b5c6a5bb" class="">Overview</h1><p id="b4193d53-c027-4259-9d28-ace5642ec938" class="">In this project, I designed College Hub, a web-based college search product that greatly simplifies the way high school students in the US pick colleges. It became the core retention engine of the entire college application guidance platform. </p><p id="45681f56-8de6-4210-972d-bf0768228fcb" class="">I kept learning about how users interact with it and iterating on it after the initial launch. I also put its components into our design system to help the design team work faster.</p><h1 id="7cc2bca9-f1f6-4b6f-b3af-196a99451a7b" class="">My Role</h1><p id="dbed5e89-d2c1-4074-8283-445a89e7d9cd" class="">As the sole product designer for this product line, I was responsible for the end-to-end design process from research to launch in each iteration. </p><h1 id="71934a80-fc39-4d3f-99cd-0c1b709d859f" class="">The Team</h1><p id="68d21c5a-e7a8-4f5a-aadd-a0169f231a1d" class="">1 Product manager, 2 Engineers</p><p id="6d442a72-a4de-4f32-8d19-a6c866d5aba1" class="">
+</p><hr id="e3965fe5-3ee0-4600-9985-d69bc6f2ad0f"/><h1 id="984961b5-23cc-4796-874b-890556a2ac36" class="">Building a guidance platform from scratch</h1><p id="613cef72-de3c-4401-8915-77c175ba8812" class="">CollegeVine 1.0 was a college application consulting service business supported by its own internal SaaS platform. </p><p id="4937bb55-79f6-4025-aa20-5975c7569bba" class="">In the year of 2020, the company took a 180 and decided to cut the service side entirely. Instead of providing tech-supported consultation service, it decided to build a SaaS platform that can provide college application guidance at scale. This platform needs to solve every important job-to-be-done in the application journey and keep students engaged. Among these jobs-to-be-done, building a list of colleges to apply to is the essential first step. My team was tasked with creating a state-of-the-art solution for this job.</p><h1 id="9fea06fc-c2ad-4e08-b1d9-f72a6f02df8a" class="">Build-measure-learn, fast</h1><p id="638035fe-6e9a-4c66-9a4e-6c3f6f65ce3c" class="">Because we were starting from the ground up, the team were working in full build-measure-learn mode, shipping new experiments and improvements on a weekly basis. I frequently brainstormed with my team, designed in very short turn-around time (2–4 days), and monitored results through usage data, screen recordings, NPS score, and user conversations. However, when it is appropriate for the project, I never hesitated to advocate for more user research and user testing to de-risk our decisions.</p><h1 id="770ee803-c114-4f76-9e39-847bfc3b3cf2" class="">North-star: Retention</h1><p id="98529639-3132-4ac8-8e04-b83d1d598fc2" class="">Since the priority back then was to prove the value of the guidance platform, retention was our north star. This goal determined how we frame the problem and informed every decision making. We needed to become the place where students would stay to create their college list.</p><h1 id="ebe22921-2782-4198-93c7-d0d0feb973b2" class="">The Challenge: How might we become the place students build their college list?</h1><p id="933c7a5b-a726-42a6-879a-f7641bc04c4a" class="">
+</p><hr id="b1d7a1db-fd7c-4aad-b790-8116d2925882"/><h1 id="330bb2b3-d1c2-4200-ba7e-d06537bb3490" class="">User pain points and competitors</h1><p id="7dbbcbaf-5fee-4dbb-aa55-3ccbc6757e5e" class="">To put ourselves in high school students’ shoes, we started from user interviews and painted a clear picture of the current college search process:</p><h3 id="13bdc3d4-7b85-4a4b-8b69-befd607aa5e6" class="">Building a college list is a complex, iterative research process</h3><p id="e1855d25-cadf-4eac-977d-bf4173d2562a" class="">Students essentially need to find 10–20 colleges that best match their criteria among the 5000 colleges in the US. This involves searching for information about colleges they are interested in, comparing colleges, discovering new colleges they didn’t know about, and revising their search criteria. The process is long and iterative — students typically start researching before their senior year in high school and can be keep looking until the application season ends.</p><h3 id="0f828584-e60e-4d26-9198-69220246c196" class="">The most common solutions are online research and spreadsheets, and students’ sheets all look vastly different </h3><p id="29ce421f-0fbb-4d1e-9f6c-b0965892629d" class="">Most students do research online. Then they use spreadsheets to build college lists and document information about each college, so that they can compare colleges, discuss with others, track application work, and so forth.</p><p id="9ae53188-5fa0-4e4a-9884-f67fe1f3723b" class=""><strong>We were surprised to find that students’ sheets are all vastly different. Each student is unique and they care about different aspects of college. </strong></p><h3 id="99ee3095-5a92-45fc-91e6-3218600bcf04" class="">…But information online is scattered, making it difficult to find and tedious to organize</h3><p id="adbd63b7-95a8-43e2-9a7a-ce925a7b10bb" class="">Information on the Internet is scattered, making it time-consuming and complicated to gather  information and make sense of it. </p><p id="233e3134-753e-452c-9739-8a9057938b26" class=""><strong>A common painful scenario: </strong>opening up hundreds of tabs, looking for information that is buried deep in college websites that all have different navigation structures, and copying and pasting information from various websites to a spreadsheet. Multiple tools and numerous websites are used in this process</p><h3 id="0af1bb79-6a93-4dad-9512-a5b1e117f0cd" class=""><strong>Competitors have limited data and no way of organizing the data</strong></h3><p id="e35346d7-a0b9-498c-9755-e0ae92a47931" class="">We conducted competitor analysis on several college search websites that were mentioned in the interviews, and found that they serve the “job” of college search only to a limited extent:</p><ol type="1" id="6e99381f-8f98-4f40-9a92-db33295ab58d" class="numbered-list" start="1"><li>They only have limited data on colleges</li></ol><ol type="1" id="071b8d96-4051-461f-9ec2-577fdc9886e0" class="numbered-list" start="2"><li>They only allow saving colleges to simplistic lists and do not provide ways of organizing data about each college to a student’s unique interests</li></ol><p id="1aa27c3c-0493-4993-82d6-a441f8f96bed" class="">Due to these limitations, these websites are used only as references occasionally, but not where students would actually build their college lists. Even though building a college list is a key job in the application process, it’s still underserved by the market in that students are still doing it manually with tedious online research and spreadsheet making.</p><h1 id="d0672430-d123-4b8a-838c-29ed473a7de3" class="">Defining design goals</h1><p id="b1f1b5d3-acea-48c9-82e5-a7096833312c" class="">Before I could jump into designing, it was important to define design goals that the whole product team could align on. I reframed the pain points into the following goals:</p><h3 id="5079eda5-7a72-4288-adac-bf6931c71f96" class="">1. Everything in one place </h3><p id="278b7dea-89d3-47c1-a847-c471e93838fa" class="">Instead of searching for scattered information on multiple websites with many tabs open</p><h3 id="972bcd80-a073-4a23-af42-01d3ffc069a9" class="">2. Easily customizable output </h3><p id="c2a46eee-9637-4dde-bb81-5cd224114028" class="">Each student care about different aspects of colleges. They need to compare colleges and organize their lists based what they care about. How might we help them do that?</p><p id="ba5589b7-e7d4-4ae4-9382-b715a6263374" class="">
+</p><hr id="8c0b410d-d2b1-4182-b2cf-67bed18945ee"/><p id="1b43b087-69e3-4379-ad28-0143ea910fa8" class="">
+</p><h1 id="40232f94-9aae-4e3e-b13c-acae0eb1082f" class="">The solution</h1><h2 id="22ef3062-dc20-49a6-b2d8-3c5452987679" class="">Everything in one place </h2><h3 id="0250993f-f20d-42c4-ae5d-7c63c458b006" class="">All data in one place</h3><p id="ceea69d9-ce68-4fe0-ba45-d882b92a73f4" class=""><strong>How might we make large number of filters easy to use?</strong></p><p id="373bb2bd-fddc-4568-9679-d13720f82605" class="">With the most data in the market, CollegeVine can meet student’s long-tail needs and even help them realize their needs. The challenge is that the number of filters can be overwhelming. I organized the filters into semantic categories and prioritized them for students so that it is easy to scan and digest. </p><p id="117a17ee-dd95-4419-9892-b0df23158313" class="">I defined a scalable UI system for the filters, making it easy to add in new ones. When we added 20 more filterable data points in later, average meaningful actions per user grew by 25%. This shows “all data in one place” is working and that the large number of filters are still easy enough to use.</p><figure id="658492e0-26bf-4ec6-b4ef-d14617115130" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/hub_filters.png"><img style="width:984px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/hub_filters.png"/></a></figure><p id="8909c1ad-1191-432b-b98a-644893e84313" class="">
+</p><p id="b321de0c-85b0-4157-aa82-593203292c66" class=""><strong>How might we accommodate complex needs around majors? </strong></p><p id="914f5504-b9ef-4673-901f-68a46f484dbd" class="">I made one exception in the UI for majors, one of the most important criteria in the college search process. It is unique because:</p><ol type="1" id="c7558eb2-71bc-473e-ae44-6f9051eed779" class="numbered-list" start="1"><li>There are over 1800 college majors, as opposed to other categorical filters that only have &lt;5 options</li></ol><ol type="1" id="9a32bb06-ad85-43fb-82e3-2af8f06422df" class="numbered-list" start="2"><li>Rarely is a student only interested in one major. They are usually undecided between several majors or looking to double major at one college. </li></ol><p id="129d7dde-4072-4263-956e-992d4fd03f18" class="">Knowing the different use cases, I opted for a solution that allow students to search for colleges with any of several majors or colleges with all of them. When we added the major filter in, average meaningful actions per user went up; NPS scores and retention also went up significantly for this cohort.</p><figure id="c4310b3e-3aa0-49bf-bf39-e056a14c2f4e" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/major.gif"><img style="width:439px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/major.gif"/></a></figure><p id="170fc32f-14f1-4cc9-a1fa-dfc1062547e1" class="">
+</p><h3 id="a3c7d6b7-e2bd-4b06-a6c5-647e51c30cc4" class="">All interactions in one place</h3><p id="8ab6d836-6acd-4819-853b-11ded9b2c125" class="">In addition to centralizing useful information, we want to make it a streamlined, uninterrupted one-tab experience, as opposed to the multi-tab, multi-platform research process students normally need to go through. We made the conscious decision to not open up a new tab when users click on a college and added a clear back button to guide users back to search mode. </p><p id="ecf99d92-a05c-48b9-bfee-2aa47019f049" class="">When we saw students get into flow state on our platform and explore hundreds of colleges in 2-hour long sessions, we knew that we were heading in the right direction. </p><h2 id="88b5adf8-b81e-4c1e-af83-376bc321abf5" class="">Easily customizable output </h2><p id="e8803339-51a0-4f44-b0a0-815d6d70d5f3" class="">Displaying the search results is another important problem to solve in the design process. I started by exploring different ways of displaying colleges with quick, lo-fi mocks and explaining their traits to the team.</p><div id="cd6739b0-302c-476a-a212-fae97d394676" class="column-list"><div id="d4d6f5fb-fd9b-45b6-9dbb-0353103a2440" style="width:33.33333333333333%" class="column"><figure id="e3c77c8b-435f-4d9d-beca-386e35c5b9f7" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/Desktop_-_11.png"><img style="width:1440px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/Desktop_-_11.png"/></a></figure><p id="2a53c710-2dfe-49af-9d7c-0337e877ae56" class="">list</p></div><div id="7f141a2e-7aba-4582-af9b-14e27f4d960b" style="width:33.33333333333333%" class="column"><figure id="f46e493d-4b7b-4921-8897-44c5664c8b00" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/Desktop_-_9.png"><img style="width:1440px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/Desktop_-_9.png"/></a></figure><p id="fb698ae6-4135-4d18-9fd2-5c917d50e972" class="">table</p></div><div id="a02a43f9-8f1c-4113-a9eb-fe5a1b89c098" style="width:33.33333333333333%" class="column"><figure id="2660f9a3-5606-4c59-a820-82040b661da1" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/Desktop_-_12.png"><img style="width:528px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/Desktop_-_12.png"/></a></figure><p id="3a1e203c-b592-4e1b-8d64-4edd8dc04ec9" class="">cards</p></div></div><p id="991796d0-a4e2-4981-a647-1a6a56d48746" class="">After weighing the pros and cons, we decided to move forward with the table view. Compared to other views, <strong>the table makes it really easy to compare colleges, sort by any criteria you want, and add any criteria you care about in a scalable way</strong>. It also fits the mental model of users who are already using spreadsheets. It may feel more rigid visually, but this was a tradeoff we were willing to make.</p><figure id="7a48acb4-9648-4058-8591-3bd2acee0456" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/find_college_v1.png"><img style="width:1600px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/find_college_v1.png"/></a><figcaption>The default state contains the most frequently used data points; Users can add and organize data in one modal</figcaption></figure><h1 id="50d6a90b-9f30-4c43-95c5-dbafe822bbe4" class="">Impact</h1><p id="bc0301c1-d9b4-4059-83e1-176cddcfd7c6" class="">Users who used College Hub had a much higher retention rate than platform users who did not use this feature. It became the core retention engine and main feature of the entire platform. It was later used as a base for other important features such as calculating admissions chances and tracking deadlines.</p><p id="aa4b6f59-4532-43fe-aa9e-ff3959bdc92e" class="">Not only has it played an important role in the business, it truly has helped millions of students find colleges.</p><blockquote id="ba159fcc-4097-4e1a-a2bd-a469c2557867" class=""><strong><strong>I feel as if I&#x27;ve received lots of guidance through CollegeVine. I&#x27;ve learned a lot in a little time by being on this webpage compared to the hours I could have spent researching colleges through the internet. — Lily G., Student</strong></strong></blockquote><p id="dbf818f0-970b-4e14-8069-a56048a56ad1" class="">
+</p><hr id="1e05fe73-0268-4fad-9958-71303f7c176e"/><p id="4c7add81-923d-400f-b243-4cdd9eba38aa" class="">
+</p><h1 id="615efe5e-0840-4039-ae8c-40bf66ac9b55" class="">Learnings and Iterations</h1><p id="eadf4c33-af0d-4ec5-91e8-7903dd92c3ea" class="">After the initial launch, I kept learning about how users interact with College Hub and made improvements throughout the years when they fit into the business strategy.</p><h2 id="550fea58-21f3-4201-9bc1-ff6872ca984f" class="">Discoverability</h2><p id="f0dcbb9c-5cf0-4587-81ea-0b33393c9368" class="">One important lesson learned is that a useful feature is useless if people cannot discover it. </p><p id="0e8b670d-79d3-4ba3-8f51-8059aadff0fb" class="">After the initial launch, we found that the engagement rate on the customization feature is not as high as we had hoped. We conducted usability tests on the live site with users, and found that it was hard for users to discover the button and hard for them to guess correctly what the button does. However, they were very excited when shown this capability. </p><p id="b0b8fdfd-37d2-4a6e-a602-fec44cb57cce" class="">This showed that: </p><ol type="1" id="2bdd1cff-739b-42eb-9043-20ded1b2790c" class="numbered-list" start="1"><li>The button is not prominent enough visually.</li></ol><ol type="1" id="ef6ed02a-2231-424b-96aa-279e58eb24cc" class="numbered-list" start="2"><li>The copy is not clear enough.</li></ol><ol type="1" id="29bd6920-ce2a-44bd-83f4-e943715d7652" class="numbered-list" start="3"><li>There can be more onboarding effort. Because this is a feature unique to us, users are not expecting it or looking for it.</li></ol><p id="de89e357-3aba-440e-91b9-493b43ab2c65" class="">I made the following improvements:</p><ol type="1" id="0705193c-441d-40be-b9f0-2f66c7b6d8aa" class="numbered-list" start="1"><li>Use a primary button instead of a secondary one</li></ol><ol type="1" id="0cbafc30-3fbf-41af-bba1-3e7b1620d697" class="numbered-list" start="2"><li>Make the copy clearer and add an “add” icon</li></ol><ol type="1" id="f351e9a2-a29e-4b97-bb96-de0431c1dd4e" class="numbered-list" start="3"><li>Develop in-context onboarding to draw users’ attention to the feature</li></ol><figure id="20c8b6b0-3502-4f69-8c53-e879e7aa34b7" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/button_visibility.png"><img style="width:984px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/button_visibility.png"/></a></figure><p id="bdc44caa-1ba7-4d00-9934-423cd4a30619" class="">
+</p><p id="ef08cc48-e4a8-42b5-9a78-8ab45459e25a" class="">Similarly, through watching screen recordings, I found that many users do not know to scroll horizontally and can miss certain information, especially when their browser does not show the scroll bar by default. To aid the discoverability of more information, I added horizontal scroll arrows and a shadow to indicate the continuity of space.</p><figure id="af1de387-3f62-4640-a3e9-ca531ea753fb" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/arrow.gif"><img style="width:318px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/arrow.gif"/></a></figure><p id="3c93984c-8fda-4a05-ab54-fd31a00c9c92" class="">
+</p><p id="02ddbfab-f952-4bd1-8a41-919ced606ad1" class="">These learnings have taught me to not only make sure the interface has appropriate visual emphasis, but also always double check discoverability and onboarding when launching new features.</p><h2 id="b51c724b-a638-4110-964d-18e6f81a0211" class="">Enabling the full experience on mobile</h2><p id="89380fc7-702d-4d3a-a0a4-a5f4a3db1d1f" class="">When we initially launched the product, we prioritized desktop because we found that students mostly do their college research on computers. Mobile still was not a priority years after, since the ratio of desktop users remained much higher than mobile. Part of the reason was the nature of college application as a serious task. However, I was certain that we were losing mobile usage simply due to the poor experience on mobile.</p><p id="aebe5146-b403-4b54-a89f-a70bec65e71a" class="">Fortunately, we had some downtime between roadmap items and the team agreed it was a perfect time to squeeze in some mobile UX improvements. The challenge was how to organize the many features we have in a much tighter space.</p><p id="4c6675cf-1b28-4574-83dd-b9f335e82df3" class="">I approached this challenge mainly from two dimensions: information hierarchy and familiar patterns. First I listed all the elements on the page from the most important to the least. Then I conducted UI research to see how other “search” products organize their features. </p><p id="406c77cf-83c3-4b8d-9f3e-4a907102e5b7" class="">I explored a number of solutions with different UI components and arrangements. After evaluating each option from the perspectives of logic and visual standpoints, I decided to use floating buttons at the bottom to for sorting and filtering. </p><figure id="831c1a44-431c-4e1b-a9af-cb43acf68e70" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/mobile_exploration.png"><img style="width:2834px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/mobile_exploration.png"/></a></figure><div id="899e47f7-412d-4982-8b09-925e24134c31" class="column-list"><div id="1facc100-6308-4211-bb24-c43a64f08569" style="width:56.25%" class="column"><figure id="9cebaf10-319f-4c04-a3ba-3a223ea32d9d" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/mobile.gif"><img style="width:356px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/mobile.gif"/></a></figure><p id="248350ff-818e-4f83-935a-a10c5b8d0a6e" class="">
+</p></div><div id="909ca2bb-fb03-42eb-b2b8-ae435c20de59" style="width:43.75%" class="column"><p id="248e90ad-82bb-42dd-b3d6-0833f0ec4f04" class="">
+</p><p id="51be6a13-3489-4008-956d-f69397d62c4b" class="">After launch, the conversion rate from sign up to completing a meaningful action increased by 71%.  Retention rate on mobile also became higher long-term.</p><p id="c9142467-0974-4426-b4b4-51cca70896af" class="">
+</p></div></div><h1 id="4e6db1d0-e2f2-402b-b20b-83d43c54546a" class="">Design system in the making</h1><p id="0a3b05d5-e5b1-45aa-abad-b749e7dbd0f5" class="">As the product grows, there is an increased need for other teams to work in Hub. In order to cultivate my own interest in design systems and speed up the design workflow and , I created Hub UI components and created a checklist for things to consider when adding new features in Hub. </p><figure id="09973835-26ff-403c-abb6-f67ee5f79c7e" class="image"><a href="College%20Hub%20658492e026bf4ec6b4efd14617115130/Screen_Shot_2022-09-06_at_2.20.05_PM.png"><img style="width:1538px" src="College%20Hub%20658492e026bf4ec6b4efd14617115130/Screen_Shot_2022-09-06_at_2.20.05_PM.png"/></a></figure><p id="54756668-6347-4f90-8a5c-662d860e55f2" class="">
+</p><p id="f0ecc8a5-2d68-4701-b7d9-1fb5cb398c29" class="">Thank you for reading ❤️ !</p><p id="e48dd7ca-c3c7-49ba-8634-406bbf0066dd" class="">
+</p></div></article></body></html>
