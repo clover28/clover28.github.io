@@ -67,7 +67,7 @@ a.highlight:hover{
   color:#000;
   background-image: linear-gradient(180deg,transparent 0%,#d1efff 0);
 }
-
+ 
 
 
 /*p a {
@@ -181,7 +181,7 @@ hr {
   margin-right: auto !important;
 }
 
-.medium {
+.medium, ol {
     font-size: 21px;
     line-height: 1.58;
     letter-spacing: -.003em;
@@ -574,3 +574,25 @@ ol.counter {
   color: rgba(0,0,0,.5);
 }
 
+
+
+li.nav-item {
+  list-style: none;
+}
+
+ul.navbar-nav, section {
+  white-space: normal;
+}
+
+h1.project-title {
+  font-size: 2.5rem;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+blockquote#ba159fcc-4097-4e1a-a2bd-a469c2557867:after {
+  content: none;
+} 
